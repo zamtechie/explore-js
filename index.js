@@ -37,8 +37,11 @@ say.call(person2, 'Call-1', 'Call-2');
 say.apply(person1, ['Apply-1', 'Apply-2']);
 say.apply(person2, ['Apply-1', 'Apply-2']);
 
-let sayBind = say.bind(person1);
-sayBind(['Bind1', 'Bind2']);
+let sayBindRanga = say.bind(person1);
+sayBindRanga(['Bind1', 'Bind2']);
+
+let sayBindZameer = say.bind(person2);
+sayBindZameer(['Bind1', 'Bind2']);
 
 /********************************/
 /* Call, Apply and Bind Methods */
