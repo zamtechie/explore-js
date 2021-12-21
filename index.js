@@ -7,6 +7,7 @@ appDiv.innerHTML = `<h1>JS Learning</h1>`;
 appDiv.innerHTML += `<ol>
   <li>HelloWorld</li>
   <li>Call, Apply & Bind</li>
+  <li>Map, Reduce & Filter</li>
   <li>Fibonacci Series</li>
   <li>Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position</li>
   <li>Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]</li>
@@ -44,5 +45,28 @@ let sayBindZameer = say.bind(person2);
 sayBindZameer(['Bind1', 'Bind2']);
 
 /********************************/
-/* Call, Apply and Bind Methods */
+/* Map, Reduce & Filter Methods */
 /********************************/
+// Map
+let numArr = [1, 2, 3, 4, 5];
+function multipleFn(n) {
+  return n * 3;
+}
+let mulArr = numArr.map(multipleFn);
+console.log(mulArr);
+
+// Reduce
+numArr = [1, 2, 3, 4, 5];
+function sumFn(n1, n2) {
+  return n1 + n2;
+}
+let sum = numArr.reduce(sumFn);
+console.log(sum);
+
+// Filter
+numArr = [1, 2, 3, 4, 5];
+function filterFn(n) {
+  return n < 3;
+}
+let filterArr = numArr.filter(filterFn);
+console.log(filterArr);
