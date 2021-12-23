@@ -5,7 +5,7 @@ export function learningFn() {
   /********************************/
 
   function helloWorld() {
-    console.log('Welcome to the world of JS using Stackblitz');
+    // console.log('Welcome to the world of JS using Stackblitz');
   }
   helloWorld();
 
@@ -16,7 +16,7 @@ export function learningFn() {
   var person2 = { firstName: 'Zameer', lastName: 'Inamdar' };
 
   function say(greeting) {
-    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+    // console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
   }
 
   say.call(person1, 'Call-1', 'Call-2');
@@ -40,7 +40,7 @@ export function learningFn() {
     return n * 3;
   }
   let mulArr = numArr.map(multipleFn);
-  console.log(mulArr);
+  // console.log(mulArr);
 
   // Reduce
   numArr = [1, 2, 3, 4, 5];
@@ -48,7 +48,7 @@ export function learningFn() {
     return n1 + n2;
   }
   let sum = numArr.reduce(sumFn);
-  console.log(sum);
+  // console.log(sum);
 
   // Filter
   numArr = [1, 2, 3, 4, 5];
@@ -56,7 +56,7 @@ export function learningFn() {
     return n < 3;
   }
   let filterArr = numArr.filter(filterFn);
-  console.log(filterArr);
+  // console.log(filterArr);
 
   /********************************/
   /****** Clousure example ********/
@@ -66,7 +66,7 @@ export function learningFn() {
     var name = 'Closure Function';
 
     function displayNameFn() {
-      console.log('ClousreFn name:', name);
+      // console.log('ClousreFn name:', name);
     }
     return displayNameFn;
   }
@@ -80,6 +80,6 @@ export function learningFn() {
   /**************************************************/
 
   (function () {
-    console.log('This is Self Invoking Function or IIFE');
+    // console.log('This is Self Invoking Function or IIFE');
   })();
 }

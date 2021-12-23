@@ -24,9 +24,18 @@ jsLearningDiv.innerHTML += `<ol>
 const jsProgramsDiv = document.getElementById('js-programs');
 jsProgramsDiv.innerHTML = `<h3>JS Programs</h3>`;
 jsProgramsDiv.innerHTML += `<ol>
-  <li>Fibonacci Series</li>
+  <li>Different ways to clone object</li>
+  <li>Factorial of a number</li>
+  <li>Fibonacci number at nth position</li>
+  <li>Fibonacci series till nth position</li>
+  <li>Summation of Array</li>
+  <li>Multiply each element of Array with number</li>
   <li>Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position</li>
-  <li>Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]</li>
+  <li>Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]
+  <li>Curring Functions</li>
+  <li>Polyfills for reduce function</li>
+  <li>Polyfills for foreach</li>
+  <li>Polyfills for subject and behaviour subject</li>
 </ol>`;
 
 const jsDesignPatternDiv = document.getElementById('js-design-patterns');
