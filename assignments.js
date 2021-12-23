@@ -1,3 +1,3 @@
-exports.assgnmentsFn = function assgnmentsFn() {
+export function assgnmentsFn() {
   console.log('In Assignments JS');
-};
+}

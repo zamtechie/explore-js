@@ -1,4 +1,4 @@
-exports.learningFn = function learningFn() {
+export function learningFn() {
   console.log('In Learning JS');
   /********************************/
   /********* HelloWorld ***********/
@@ -82,4 +82,4 @@ exports.learningFn = function learningFn() {
   (function () {
     console.log('This is Self Invoking Function or IIFE');
   })();
-};
+}

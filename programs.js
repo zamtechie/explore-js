@@ -1,3 +1,3 @@
-exports.programsFn = function programsFn() {
+export function programsFn() {
   console.log('In Programs JS');
-};
+}
