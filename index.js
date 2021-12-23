@@ -8,6 +8,7 @@ appDiv.innerHTML += `<ol>
   <li>HelloWorld</li>
   <li>Call, Apply & Bind</li>
   <li>Map, Reduce & Filter</li>
+  <li>Closure Example</li>
   <li>Fibonacci Series</li>
   <li>Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position</li>
   <li>Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]</li>
@@ -70,3 +71,28 @@ function filterFn(n) {
 }
 let filterArr = numArr.filter(filterFn);
 console.log(filterArr);
+
+/********************************/
+/****** Clousure example ********/
+/********************************/
+
+function closureFn() {
+  var name = 'Closure Function';
+
+  function displayNameFn() {
+    console.log('ClousreFn name:', name);
+  }
+  return displayNameFn;
+}
+
+var myFunc = closureFn();
+myFunc();
+
+/**************************************************/
+/* IIFE - Immediatly Invoking Function Expression */
+/************* Self Invoking function *************/
+/**************************************************/
+
+(function () {
+  console.log('This is Self Invoking Function or IIFE');
+})();
