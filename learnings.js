@@ -82,4 +82,20 @@ export function learningFn() {
   (function () {
     // console.log('This is Self Invoking Function or IIFE');
   })();
+
+  /**************************************************/
+  /*********** Data Encoding and Decoding ***********/
+  /**************************************************/
+  function encodeDataFn(data) {
+    return btoa(data);
+  }
+
+  function decodeDataFn(data) {
+    return atob(data);
+  }
+
+  let encodedData = encodeDataFn('Zameer');
+  let decodedData = decodeDataFn(encodedData);
+  // console.log('encodedData:', encodedData);
+  // console.log('decodedData:', decodedData);
 }

@@ -1,6 +1,41 @@
 export function programsFn() {
   console.log('In Programs JS');
 
+  /************************************/
+  /* Different ways to clone a object */
+  /************************************/
+  let cloneObjFn = () => {
+    // Using spead operator
+    let spreadObj1 = {
+      fname: 'Zameer',
+      lname: 'Inamdar',
+    };
+    let spreadObj2 = { ...spreadObj1 };
+    spreadObj2.lname = 'changed';
+    let a = [1, 2, 3];
+    // console.log(...a);
+    // console.log(spreadObj1);
+    // console.log(spreadObj2);
+
+    let assignObj1 = {
+      city: 'Pune',
+      state: 'Maharashtra',
+    };
+    let assignObj2 = Object.assign({}, assignObj1);
+    assignObj2.city = 'Mumbai';
+    // console.log(assignObj1);
+    // console.log(assignObj2);
+
+    let jsonObj1 = {
+      designation: 'UI Architect',
+      company: 'Persistent Systems',
+    };
+    let jsonObj2 = JSON.parse(JSON.stringify(jsonObj1));
+    jsonObj2.company = 'Barclays';
+    // console.log(jsonObj1);
+    // console.log(jsonObj2);
+  };
+  cloneObjFn();
   /********************************/
   /**** Factorial of a number *****/
   /********************************/

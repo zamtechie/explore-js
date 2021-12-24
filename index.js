@@ -19,11 +19,13 @@ jsLearningDiv.innerHTML += `<ol>
   <li>Call, Apply & Bind</li>
   <li>Map, Reduce & Filter</li>
   <li>Closure Example</li>
+  <li>Data Encoding and Decoding</li>
 </ol>`;
 
 const jsProgramsDiv = document.getElementById('js-programs');
 jsProgramsDiv.innerHTML = `<h3>JS Programs</h3>`;
 jsProgramsDiv.innerHTML += `<ol>
+  <li>Spread and Rest operator</li>
   <li>Different ways to clone object</li>
   <li>Factorial of a number</li>
   <li>Fibonacci number at nth position</li>
