@@ -19,7 +19,9 @@ jsLearningDiv.innerHTML += `<ol>
   <li>Call, Apply & Bind</li>
   <li>Map, Reduce & Filter</li>
   <li>Closure Example</li>
+  <li>IIFE / Self Invoking Function</li>
   <li>Data Encoding and Decoding</li>
+  <li>Different ways you can create an Object</li>
 </ol>`;
 
 const jsProgramsDiv = document.getElementById('js-programs');

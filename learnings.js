@@ -98,4 +98,73 @@ export function learningFn() {
   let decodedData = decodeDataFn(encodedData);
   // console.log('encodedData:', encodedData);
   // console.log('decodedData:', decodedData);
+
+  /**************************************************/
+  /*** Different ways you can create object in js ***/
+  /**************************************************/
+
+  // Constructor
+  let constructorObjFn = () => {
+    function person(firstName, lastName, age) {
+      this.fname = firstName;
+      this.lname = lastName;
+      this.age = age;
+      this.printInfo = function () {
+        console.log(`${this.fname} ${this.lname} whose age is ${this.age}`);
+      };
+    }
+    let personObj1 = new person('Zameer', 'Inamdar', 36);
+
+    // personObj1.printInfo();
+  };
+  constructorObjFn();
+
+  // Object literal
+  let objLiteralFn = () => {
+    let person = {
+      fname: 'Ranga',
+      lname: 'Komarthi',
+      age: 31,
+      printInfo: function () {
+        console.log(`${this.fname} ${this.lname} whose age is ${this.age}`);
+      },
+    };
+
+    let person1 = person;
+    // person1.printInfo();
+  };
+  objLiteralFn();
+
+  // Object.create
+  let objCreateFn = () => {
+    const person = {
+      fname: 'Pradeep',
+      lname: 'Desai',
+      age: 36,
+      printInfo: function () {
+        console.log(`${this.fname} ${this.lname} whose age is ${this.age}`);
+      },
+    };
+    let personObj = Object.create(person);
+    // personObj.printInfo();
+  };
+  objCreateFn();
+
+  // class
+  let classObjfn = () => {
+    class Person {
+      constructor(fname, lname, age) {
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+      }
+
+      printInfo = function () {
+        console.log(`${this.fname} ${this.lname} whose age is ${this.age}`);
+      };
+    }
+    let personObj1 = new Person('Rock', 'Star', 36);
+    // personObj1.printInfo();
+  };
+  classObjfn();
 }
