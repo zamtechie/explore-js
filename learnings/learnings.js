@@ -167,4 +167,8 @@ export function learningFn() {
     // personObj1.printInfo();
   };
   classObjfn();
+
+  /******************************/
+  /*** Example of Web workers ***/
+  /******************************/
 }

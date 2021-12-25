@@ -1,10 +1,10 @@
 // Import stylesheets
 import './style.css';
 
-import { learningFn } from './learnings.js';
-import { programsFn } from './programs.js';
-import { designPatternsFn } from './design-patterns.js';
-import { assgnmentsFn } from './assignments.js';
+import { learningFn } from './learnings/learnings.js';
+import { programsFn } from './programs/programs.js';
+import { designPatternsFn } from './design-patterns/design-patterns.js';
+import { assgnmentsFn } from './assignments/assignments.js';
 
 learningFn();
 programsFn();
@@ -22,6 +22,9 @@ jsLearningDiv.innerHTML += `<ol>
   <li>IIFE / Self Invoking Function</li>
   <li>Data Encoding and Decoding</li>
   <li>Different ways you can create an Object</li>
+  <li>Example of Web workers</li>
+  <li>Example of Service workers</li>
+  <li>Example of Web Sockets</li>
 </ol>`;
 
 const jsProgramsDiv = document.getElementById('js-programs');
@@ -53,3 +56,19 @@ jsAssignmentsDiv.innerHTML = `<h3>JS Assignments</h3>`;
 jsAssignmentsDiv.innerHTML += `<ol>
   <li>Create a Calculator</li>
 </ol>`;
+
+if (window.Worker) {
+  // Creating new web worker using constructor
+  var worker = new Worker('worker.js');
+  // const worker = new Worker('https://explore-js.stackblitz.io/worker.js');
+
+  var message = 'Hello';
+
+  // Sending the message using postMessage
+  worker.postMessage(message);
+
+  // On response
+  worker.onmessage = function (e) {
+    console.log(e.data);
+  };
+}

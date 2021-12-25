@@ -1,4 +1,7 @@
-JS: Basic
+----------
+JS: BASICS
+----------
+
 1. Difference between var, let and const in javascript?
   - All var, let and const are used to declare the variable in JS
   - Variable defined using var has a function scope.
@@ -13,12 +16,13 @@ JS: Basic
   - Safari has JavaScriptCore engine
 
 3. In how many ways you can create an object?
-  - Constructor: Constructor is nothing but a function and with the help of new keyword, constructor
-                function allows to create multiple objects
+  - Constructor: Constructor is nothing but a function and with the help of new keyword, 
+                 constructor function allows to create multiple objects
   - Object literals: We simply define the property and values inside the curly braces.
-  - Object.create(): Object.create() method creates the new object using the existing object as the prototype.
-  - class: ES6 supports class concepts similar to object oriented language, so object can be created out of the
-          class in JS as well.
+  - Object.create(): Object.create() method creates the new object using the existing 
+                     object as the prototype.
+  - class: ES6 supports class concepts similar to object oriented language, so object can be created out 
+           of the class in JS as well.
  
 
 4. Ways to clone object in JS?
@@ -47,37 +51,43 @@ JS: Basic
 	    - Constructor Invocation is performed when 'new' keyword is used followed by the function name
 	      - let personObject = new Person('Zameer', 'Inamdar');
 	
- 
-JS: Level 2
+7. What is settimeout, cleartimeout, setinterval and clearintervals methods in JS?
+
+------------
+JS: ADVANCED
+------------
 
 1. What are Transpilers and Polyfills?
   - Transpilers: It is library which translate the source code to another source code.
-                It parse the modern code and rewrite the it using older syntax construct so that it can run in older browser:
-				Babel is one of the most prominent transpilers
-				Modern project build systems, such as webpack, provide means to run transpiler automatically on every code change, so it’s very easy to integrate into development process.
-				eg: 
-				// before running the transpiler // nullish coalescing operator
-				height = height ?? 100;
+                 It parse the modern code and rewrite the it using older syntax construct so that it
+                 can run in older browser:
+				         Babel is one of the most prominent transpilers
+				         Modern project build systems, such as webpack, provide means to run transpiler automatically
+                 on every code change, so it’s very easy to integrate into development process.
+				         eg: 
+                 // before running the transpiler // nullish coalescing operator
+				            height = height ?? 100;
 
-				// after running the transpiler
-				height = (height !== undefined && height !== null) ? height : 100;
+				        // after running the transpiler
+				          height = (height !== undefined && height !== null) ? height : 100;
 
   - Polyfills: The script that updates/add new functions so that it can be run without errors in old browser.
               eg:
-			  if (!Math.trunc) { // if no such function
-				  // implement it
-				  Math.trunc = function(number) {
-					// Math.ceil and Math.floor exist even in ancient JavaScript engines
-					// they are covered later in the tutorial
-					return number < 0 ? Math.ceil(number) : Math.floor(number);
-				  };
-				}
-			  'core js' that supports a lot, allows to include only needed features.
-              'polyfill.io' service that provides a script with polyfills, depending on the features and user’s browser. 
+              if (!Math.trunc) { // if no such function
+                // implement it
+                Math.trunc = function(number) {
+                // Math.ceil and Math.floor exist even in ancient JavaScript engines
+                // they are covered later in the tutorial
+                return number < 0 ? Math.ceil(number) : Math.floor(number);
+                };
+              }
+              'core js' that supports a lot, allows to include only needed features.
+              'polyfill.io' service that provides a script with polyfills, depending on the features and 
+              user’s browser. 
 
 2. 	What is Call, Apply and Bind in JS OR What is Function borrowing?
-  - Function borrowing: Function borrowing allows us to use the methods of one object on a different object without having to make a copy of that 
-    method.
+  - Function borrowing: Function borrowing allows us to use the methods of one object on a different object
+                        without having to make a copy of that method.
   - Call:  It invokes the function and allows you to pass the arguments one by one.
   - Apply: It invokes the function and allows you to pass the arguments as an array.
   - Bind:  It returns a new function and allows you to pass the any number of arguments as array.
@@ -89,7 +99,8 @@ JS: Level 2
   - Filter: It filters the elements from Array and return array of element which statisfy the condition.
 
 4. What is closure in JS?
-  - Closure is the combination of a function bundled together with reference to its surrounding state(the lexical enviournemnt)
+  - Closure is the combination of a function bundled together with reference to its surrounding 
+    state(the lexical enviournemnt)
 
 5. What is IIFE or Self Exceuting Anonymous Function?
   - IIFE is 'Immediately Invoking Expression' is JS function that run as soon as it is defined.
@@ -97,7 +108,8 @@ JS: Level 2
     - It contains two parts:
       - The first one is the anonymous function with lexical scope enclosed in ()
 	    - It prevents accessing variables within the IIFE as well as polluting the global scope.
-	  - The second part creates the immediate invoked function expression () through which JS engine will directly interpret the function.
+	  - The second part creates the immediate invoked function expression () through which JS engine will
+      directly interpret the function.
 
 6. encoding & decoding of data?
   - When data needs to be transferred in API we can use data encoding and decoding we need to decode the data from the API.
@@ -108,9 +120,13 @@ JS: Level 2
   - Spread operator: It expands an array into elements
   - Rest operator: collects multiple element and condenses it to single element
  
-7. WebAPI methods eg setTimeOut
+8. What is Web workers and Service workers? 
+  - Web workers:  Web workers gives us the possibility to write the multi threaded Javascript, which does not block the DOM.
+                  Useful to improve the performance of the web pagea
 
-8. web workers vs service workers
+9. Web workers vs Service workers?
+
+10. What is web sockets?
 - async await
 - export default
 
