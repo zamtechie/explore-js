@@ -56,19 +56,3 @@ jsAssignmentsDiv.innerHTML = `<h3>JS Assignments</h3>`;
 jsAssignmentsDiv.innerHTML += `<ol>
   <li>Create a Calculator</li>
 </ol>`;
-
-if (window.Worker) {
-  // Creating new web worker using constructor
-  var worker = new Worker('worker.js');
-  // const worker = new Worker('https://explore-js.stackblitz.io/worker.js');
-
-  var message = 'Hello';
-
-  // Sending the message using postMessage
-  worker.postMessage(message);
-
-  // On response
-  worker.onmessage = function (e) {
-    console.log(e.data);
-  };
-}

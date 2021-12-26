@@ -171,4 +171,23 @@ export function learningFn() {
   /******************************/
   /*** Example of Web workers ***/
   /******************************/
+  /*
+  Web-Workers works on server, if we want to run locally then
+  it needs to be run web-security-disable mode
+  therefore commenting this code
+  
+  if (window.Worker) {
+    // Creating new web worker using constructor
+    var worker = new Worker('worker.js');
+
+    var message = 'Hello';
+
+    // Sending the message using postMessage
+    worker.postMessage(message);
+
+    // On response
+    worker.onmessage = function (e) {
+      console.log(e.data);
+    };
+  }*/
 }
