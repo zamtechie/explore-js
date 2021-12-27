@@ -68,8 +68,7 @@ JS: ADVANCED
                     eg:
                     // before running the transpiler // nullish coalescing operator
                     height = height ?? 100;
-
-				            // after running the transpiler
+                    // after running the transpiler
                     height = (height !== undefined && height !== null) ? height : 100;
 
     - Polyfills:  The script that updates/add new functions so that it can be run without errors in old browser.
