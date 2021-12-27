@@ -22,7 +22,6 @@ JS: BASICS
     - Object.create(): Object.create() method creates the new object using the existing object as the prototype.
     - class:  ES6 supports class concepts similar to object oriented language, so object can be created out 
               of the class in JS as well.
- 
 
 4.  Ways to clone object in JS?
     - There 3 ways to clone the object:
@@ -36,7 +35,7 @@ JS: BASICS
     - Deep Copy:  It is a true copy where all the nested object is also copied.
                   - JSON.parse(JSON.stringify(object));
 				 
-6.  What is this keywork in JS?
+6.  What is significance of 'this' keywork in JS?
     - 'this' stores the current execution context of the javascript program
     - 'this' keywork behave deferently base on the function invocation
     - 3 types of function invocation:
@@ -52,11 +51,14 @@ JS: BASICS
 	
 7.  What is settimeout, cleartimeout, setinterval and clearintervals methods in JS?
 
+8.  What are trim functions in JS?
+
 ------------
 JS: ADVANCED
 ------------
+1. What is hoisting in JS?
 
-1.  What are Transpilers and Polyfills?
+2.  What are Transpilers and Polyfills?
     - Transpilers:  It is library which translate the source code to another source code.
                     It parse the modern code and rewrite the it using older syntax construct so that it
                     can run in older browser:
@@ -84,24 +86,24 @@ JS: ADVANCED
                   'polyfill.io' service that provides a script with polyfills, depending on the features and 
                   user’s browser. 
 
-2. 	What is Call, Apply and Bind in JS OR What is Function borrowing?
+3. 	What is Call, Apply and Bind in JS OR What is Function borrowing?
     - Function borrowing: Function borrowing allows us to use the methods of one object on a different object
                           without having to make a copy of that method.
     - Call:  It invokes the function and allows you to pass the arguments one by one.
     - Apply: It invokes the function and allows you to pass the arguments as an array.
     - Bind:  It returns a new function and allows you to pass the any number of arguments as array.
  
-3.  What are Map, Reduce and Filter Array functions in JS?
+4.  What are Map, Reduce and Filter Array functions in JS?
     - Map, Reduce and Filter are Array functions which transforms the array according to the applied function.
     - Map:  It applies a given function on all the elements of the Array and return the updated Array
     - Reduce: It reduces all the elements of the Array to the single value by repeatedly applying a function 
     - Filter: It filters the elements from Array and return array of element which statisfy the condition.
 
-4.  What is closure in JS?
+5.  What is closure in JS?
     - Closure is the combination of a function bundled together with reference to its surrounding 
       state(the lexical enviournemnt)
 
-5.  What is IIFE or Self Exceuting Anonymous Function?
+6.  What is IIFE or Self Exceuting Anonymous Function?
     - IIFE is 'Immediately Invoking Expression' is JS function that run as soon as it is defined.
     - It is also known as design pattern as 'Self Exceuting Anonymous Function'
       - It contains two parts:
@@ -110,17 +112,17 @@ JS: ADVANCED
 	    - The second part creates the immediate invoked function expression () through which JS engine will
         directly interpret the function.
 
-6.  encoding & decoding of data?
+7.  Encoding & Decoding of data in JS?
     - When data needs to be transferred in API we can use data encoding and decoding we need to decode the data from 
       the API.
     - Encoding btoa(): Binary to ASCII
     - Decoding atob(): ASCII to Binary.
 
-7.  What are spread operator and rest operator?
+8.  What are spread operator and rest operator?
     - Spread operator: It expands an array into elements
     - Rest operator: collects multiple element and condenses it to single element
  
-8.  What is Web workers and Service workers? 
+9.  What are Web workers and Service workers? 
     - Web workers:  Web workers gives us the possibility to write the multi threaded Javascript, which does not block 
                     the DOM.
                     Useful to improve the performance of the web page.
@@ -129,14 +131,14 @@ JS: ADVANCED
                         Service worker mainly serve features like background sync, push notifications and they are commonly
                         used for 'offline first' applications.
 
-9.  Web workers vs Service workers vs Worklets?
+10. Web workers vs Service workers vs Worklets?
     - Web workers is general purpose type worker, this is mainly used for off-load pretty much any heavy processing from
       the main thread.
     - Service workers is explicitly used for being the proxy between the browser and network and/or cache.
     - Worklets are a very lightweight, higly specific worker. They enable us as developer to hook into various
       parts of the browser's rendering process.
 
-10. What is critical rendering path? https://bitsofco.de/understanding-the-critical-rendering-path/
+11. What is critical rendering path? https://bitsofco.de/understanding-the-critical-rendering-path/
     - When browser receives the HTML response for a page from server, there are lots of steps to be taken before pixels
       is drawn in screen.
       This sequence the browsers needs to run through for the initial paint of the page is called 'Critical Rendering Path'.
@@ -156,20 +158,33 @@ JS: ADVANCED
       6.  Painting: In Painting step the visible content of the page can be converted to pixels to be displayed on the 
                     screen.
 
-10. What is web sockets?
-- async await
-- export default
+12. What is web sockets?
 
-- trim functions
-- q.all
-- Promisis
-- callback hell
-- hoisting
-async await
+13. What is callback hell?
 
-9. how to avoid nested for loop
-10. Throlling vs debouncing
-11. webpack 
+14. What is Promise in JS?
+
+15. What is the use of async and await?
+    - Async:  JS is is synchronous language, in order to make function asynchronous we can use async keyword.
+              It simply allow us to write promise based code.
+    - Await:  Await function is used to wait for the promise. 
+              It could be used only in the async block.
+              It makes the code to wait untill the promise returns a result.
+              It only makes async block wait.
+
+16. What is export in JS and what is export default?
+    - Export: Export statement is used when creating the JavaScript modules to export objects, function, variables so
+              they can be used by other programs with the help of the import statments.
+              There are 2 types of exports:
+              1.  Named Export: Name exports are useful to export severals values, During the import, it is mandatory
+                                to use the same name of the corresponding object.
+              2.  Default Exports:  Default exports are used to export only a single object, function, variable.
+                                    During the import, we can use any name to import.
+              Note: We can use both 'Named' and 'Default' exports in the same file.
+
+17. What is Throlling vs debouncing in JS?
+
+18. What is webpack in JS?
 
 JS: Programs
 1.  Different ways to clone object
@@ -196,10 +211,14 @@ JS: Design Patterns
 
 4. Pub-sub/Event Emitter Design Pattern?
 
+5. What is Facade Design Pattern?
+
 JS: Assignments
 1. Create a Calculator
 
 JS ARCHITECTURE:
+- q.all
+-. how to avoid nested for loop
 1. microservice
 2. How browser will know the new version
 file#code.js

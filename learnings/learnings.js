@@ -190,4 +190,25 @@ export function learningFn() {
       console.log(e.data);
     };
   }*/
+
+  /******************************/
+  /*** Example of Async/Await ***/
+  /******************************/
+
+  const getData = async () => {
+    var y = await 'Hello World';
+    console.log(y);
+  };
+
+  // console.log(1);
+  // getData();
+  // console.log(2);
+
+  // var timerId = setIntervals(delayFuncExec, 100);
+
+  console.log('Timer Id: ' + timerId);
+
+  clearInterval(timerId);
+  timerId = 0;
+  clearTimeout(timerId);
 }
