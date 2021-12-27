@@ -60,17 +60,17 @@ JS: ADVANCED
 
 2.  What are Transpilers and Polyfills?
     - Transpilers:  It is library which translate the source code to another source code.
-                    It parse the modern code and rewrite the it using older syntax construct so that it
-                    can run in older browser:
-				            Babel is one of the most prominent transpilers
-				            Modern project build systems, such as webpack, provide means to run transpiler automatically
-                    on every code change, so it’s very easy to integrate into development process.
-				            eg: 
+                    It parse the modern code and rewrite the it using older syntax construct so that it can run in older browser:
+
+                    Babel is one of the most prominent transpilers.
+                    Modern project build systems, such as webpack, provide means to run transpiler automatically on every code change, so it’s very easy to 
+                    integrate into development process.
+                    eg:
                     // before running the transpiler // nullish coalescing operator
-				            height = height ?? 100;
+                    height = height ?? 100;
 
 				            // after running the transpiler
-				            height = (height !== undefined && height !== null) ? height : 100;
+                    height = (height !== undefined && height !== null) ? height : 100;
 
     - Polyfills:  The script that updates/add new functions so that it can be run without errors in old browser.
                   eg:
