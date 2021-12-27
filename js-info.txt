@@ -182,7 +182,18 @@ JS: ADVANCED
                                     During the import, we can use any name to import.
               Note: We can use both 'Named' and 'Default' exports in the same file.
 
-17. What is Throlling vs debouncing in JS?
+17. What is Throttling vs debouncing in JS?
+    - Throttling and Debouncing techniques are used to limit the number of times a function
+      can execute.
+    - Throttling: Throttling is a technique in which, no matter how many times the user fires
+                  the event, the attached function will be executed only once in the given
+                  time interval.
+                  Throttling  ensures that the function executes at a reqular interval.
+
+    - Debouncing: Debouncing is a technique in which, no matter how many times the user fires
+                  the event, the attached function will be executed only after the specified
+                  time once the user stop firing the event.
+                  Debouncing behaves like grouping multiple events into one single event.
 
 18. What is webpack in JS?
 

@@ -203,12 +203,4 @@ export function learningFn() {
   // console.log(1);
   // getData();
   // console.log(2);
-
-  // var timerId = setIntervals(delayFuncExec, 100);
-
-  console.log('Timer Id: ' + timerId);
-
-  clearInterval(timerId);
-  timerId = 0;
-  clearTimeout(timerId);
 }
