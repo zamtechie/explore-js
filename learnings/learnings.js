@@ -225,4 +225,18 @@ export function learningFn() {
   };
 
   // setAndclearTimeoutFn();
+
+  /**********************/
+  /*** Hoisting in JS ***/
+  /**********************/
+
+  const hoistingFn = () => {
+    callingFnBefore();
+
+    function callingFnBefore() {
+      console.log('In callingfnBefore');
+    }
+  };
+
+  // hoistingFn();
 }

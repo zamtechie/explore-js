@@ -57,11 +57,18 @@ JS: BASICS
       the timer.
 
 8.  What are trim functions in JS?
+    - trim(): Trim function removes the leading and trailing spaces from the string.
+    - trimLeft(): It removes all leading spaces from the string.
+    - trimRight():  It removes all the trailing spaces from the string.
 
 ------------
 JS: ADVANCED
 ------------
-1. What is hoisting in JS?
+1.  What is hoisting in JS?
+    - In JS, Hoisting is the default behaviour of moving all the declaration at the top of the scope before
+      execution.
+      Basically, it gives us an advantage that no matter where functions and variables are declared, they are
+      moved to the top of their scope regardless of whether their scope is global or local.
 
 2.  What are Transpilers and Polyfills?
     - Transpilers:  It is library which translate the source code to another source code.
