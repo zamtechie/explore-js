@@ -203,4 +203,26 @@ export function learningFn() {
   // console.log(1);
   // getData();
   // console.log(2);
+
+  /*********************************/
+  /*** setTimeout & clearTimeout ***/
+  /*********************************/
+  const setAndclearTimeoutFn = () => {
+    console.log('In setand clear timeout functions');
+
+    const setTimeoutId = setTimeout(function () {
+      console.log('In setTimeout function');
+      console.log('setId: ', setTimeoutId);
+      clearTimeout(setTimeoutId);
+    }, 1000);
+
+    const setIntervalId = setInterval(function () {
+      console.log('setIntervalId: ', setIntervalId);
+      console.log('In setInterval methodss');
+
+      clearInterval(setIntervalId);
+    }, 3000);
+  };
+
+  // setAndclearTimeoutFn();
 }

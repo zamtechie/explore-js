@@ -49,7 +49,12 @@ JS: BASICS
 	      - Constructor Invocation is performed when 'new' keyword is used followed by the function name
 	        - let personObject = new Person('Zameer', 'Inamdar');
 	
-7.  What is settimeout, cleartimeout, setinterval and clearintervals methods in JS?
+7.  What is settimeout, cleartimeout, setinterval and clearintervals methods in JS  OR what are webAPI methods 
+    provided by browser?
+    - setTimeout and clearTimeout: setTimeout takes two arguments, 1st the callback function and 2nd one after 
+      how  much time(in ms) it should be executed.
+      Then number ID value is retured by setTimeOut function which needs to be passed into clearTimeout() to clear
+      the timer.
 
 8.  What are trim functions in JS?
 
