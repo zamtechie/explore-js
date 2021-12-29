@@ -97,7 +97,7 @@ JS: ADVANCED
                   'polyfill.io' service that provides a script with polyfills, depending on the features and 
                   user’s browser. 
 
-3. 	What is Call, Apply and Bind in JS OR What is Function borrowing?
+3.  What is Call, Apply and Bind in JS OR What is Function borrowing?
     - Function borrowing: Function borrowing allows us to use the methods of one object on a different object
                           without having to make a copy of that method.
     - Call:  It invokes the function and allows you to pass the arguments one by one.
@@ -172,8 +172,19 @@ JS: ADVANCED
 12. What is web sockets?
 
 13. What is callback hell?
+    - Callback functions are nothing but functions that take some time to produce a result.
+    - When we have a nested callbacks methods where each callback function takes an argument that is a result from 
+      previous callbacks, the code structure becomes complex and difficult to read and maintain.
+      And if there is error in one function it will affect all other functions.
+      To avoid this we can use the Promises.
 
 14. What is Promise in JS?
+    - Promises are used to handle asynchronous operations in JS.
+    - A Promise is a proxy for the value not necessarily known when it is created.
+    - It has different states:
+      - pending:  Neither fulfilled nor rejected
+      - fulfilled:  meaning that operations was completed successfully.
+      - rejected: meaning that operations was failed.
 
 15. What is the use of async and await?
     - Async:  JS is is synchronous language, in order to make function asynchronous we can use async keyword.

@@ -239,4 +239,32 @@ export function learningFn() {
   };
 
   // hoistingFn();
+
+  /**********************/
+  /*** Promises in JS ***/
+  /**********************/
+
+  const promiseFn = () => {
+    const myPromise = new Promise((resolve, reject) => {
+      if (Math.random() > 0) {
+        resolve('I am a positive number');
+      } else {
+        reject('I am a negative number');
+      }
+    });
+
+    myPromise
+      .then(
+        function (message) {
+          console.log(message);
+        },
+        function (message) {
+          console.log(message);
+        }
+      )
+      .catch((catchMessage) => console.log(catchMessage))
+      .finally(() => console.log('In a finally bock'));
+  };
+
+  // promiseFn();
 }
