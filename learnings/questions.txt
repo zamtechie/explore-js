@@ -61,6 +61,17 @@ JS: BASICS
     - trimLeft(): It removes all leading spaces from the string.
     - trimRight():  It removes all the trailing spaces from the string.
 
+9.  Difference between normal function and arrow functions?
+    - Arrow functions also known as fat arrow function is a new feature introduced by ES6.
+      While both regular function and arrow functions work in similar manner, there are certain differences between them.
+      1.  Syntax difference.
+      2.  Arguments binding:  Arrow functions does not have an 'arguments' binding. 
+      3.  Use of 'this' keyword:  Unlike regular function, arrow functions do not have their own 'this'.
+      4.  Use of 'new' keyword: Regular functions are constructible, they can be called using the 'new' keyword.
+                                However the arrow functions are only 'callable' and not 'constructible'. Thus we will get
+                                runtime error on trying to construct a 'non-constructible' arrow functions using new keyword.
+
+
 ------------
 JS: ADVANCED
 ------------
@@ -228,6 +239,8 @@ JS: ADVANCED
       - Plugins
       - Mode
       - Browser Compatibility
+
+19. Explain event looping in JS? https://flaviocopes.com/javascript-event-loop/#:~:text=In%20general%2C%20in%20most%20browsers,handle%20API%20calls%20for%20example.
 
 ---------------
 JS ARCHITECTURE
