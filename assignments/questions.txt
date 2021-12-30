@@ -1,0 +1,5 @@
+---------------
+JS: Assignments
+---------------
+
+1. Create a Calculator
