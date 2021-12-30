@@ -218,6 +218,16 @@ JS: ADVANCED
                   Debouncing behaves like grouping multiple events into one single event.
 
 18. What is webpack in JS?
+    - Webpack is a static module bundler for modern Javascript.
+      When webpack processes your application, it internally builds a dependency graph from one or more entries points and 
+      then combines every module your project needs into one or more bundles.
+      To get started you only need to understand its Core Concepts:
+      - Entry
+      - Output
+      - Loaders
+      - Plugins
+      - Mode
+      - Browser Compatibility
 
 ---------------
 JS ARCHITECTURE
@@ -285,6 +295,9 @@ ANGULAR
 - Observals and Promise difference
 - viewchild and viewchildren
 - viewencapsulation true, from component to access universal css
+
+- Unit test frameworks
+- jest framwork
 
 
 AWS:
