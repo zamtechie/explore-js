@@ -86,8 +86,8 @@ JS: ADVANCED
                     It parse the modern code and rewrite the it using older syntax construct so that it can run in older browser:
 
                     Babel is one of the most prominent transpilers.
-                    Modern project build systems, such as webpack, provide means to run transpiler automatically on every code change, so it’s very easy to 
-                    integrate into development process.
+                    Modern project build systems, such as webpack, provide means to run transpiler automatically on every code
+                    change, so it’s very easy to integrate into development process.
                     eg:
                     // before running the transpiler // nullish coalescing operator
                     height = height ?? 100;

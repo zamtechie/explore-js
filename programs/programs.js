@@ -131,4 +131,57 @@ export function programsFn() {
     // console.log('Multiplied Array:', multipliedArr);
   }
   multiplyElementsOfArray(5);
+
+  /************************************************************/
+  /* Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position */
+  /************************************************************/
+  let subsetArrFn = (_) => {
+    const arr = [1, 2, 3, 1, 3, 4, 5, 6, 7];
+    const subsetArr = arr.splice(3, 4);
+    console.log('subsetArr:', subsetArr);
+  };
+
+  // subsetArrFn();
+
+  /************************************************************/
+  /* Unique of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position */
+  /************************************************************/
+
+  let removeDuplicateFn = (_) => {
+    const arr = [1, 2, 3, 1, 3, 4, 5, 6, 7];
+    let uniqueArr = [];
+
+    console.log([...new Set(arr)]);
+
+    function filterArr(num) {
+      if (!uniqueArr.includes(num)) {
+        uniqueArr.push(num);
+        return true;
+      }
+    }
+    arr.filter(filterArr);
+
+    console.log(uniqueArr);
+  };
+
+  // removeDuplicateFn();
+
+  /*************************************************************************/
+  /* Count of duplicaite of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position */
+  /*************************************************************************/
+
+  let countOfDuplicateFn = () => {
+    let arr = [1, 2, 3, 1, 3, 4, 5, 6, 7, 1, 1, 2, 3, 4, 5, 6, 7, 8];
+    let countObj = {};
+
+    for (let i = 0; i < arr.length; i++) {
+      if (countObj[arr[i]]) {
+        countObj[arr[i]] += 1;
+      } else {
+        countObj[arr[i]] = 1;
+      }
+    }
+    console.log(countObj);
+  };
+  // countOfDuplicateFn();
 }
