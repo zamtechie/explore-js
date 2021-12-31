@@ -2,16 +2,17 @@
 JS: Programs
 ------------
 
-1.  Different ways to clone object
-2.  Factorial of a number
-3.  Fibonacci number at nth position
-4.  Fibonacci series till nth position
-5.  Summation of Array
-6.  Multiply each element of Array with number
-7.  Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position
-8.  Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]
-9.  Curring Functions eg: sum()()()()()?
-10. Converting number to binary?
-11. Polyfills for reduce function
-12. Polyfills for foreach
-13. Polyfills for subject and behaviour subject
+1.  Spread and Rest operator
+2.  Different ways to clone object
+3.  Factorial of a number
+4.  Fibonacci number at nth position
+5.  Fibonacci series till nth position
+6.  Summation of Array
+7.  Multiply each element of Array with number
+8.  Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position
+9.  Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]
+10. Curring Functions eg: sum()()()()()?
+11. Converting number to binary?
+12. Polyfills for reduce function
+13. Polyfills for foreach
+14. Polyfills for subject and behaviour subject

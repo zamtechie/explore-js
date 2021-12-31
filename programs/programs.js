@@ -1,9 +1,42 @@
 export function programsFn() {
   console.log('In Programs JS');
 
+  /*************************************/
+  /* Spread Operator and Rest operator */
+  /*************************************/
+
+  let spreadAndRestOpFn = () => {
+    let arr = [1, 2, 3];
+
+    // console.log(...arr);
+
+    function spreadOpFn(a, b, c) {
+      console.log(a + b + c);
+    }
+
+    spreadOpFn(...arr);
+
+    let a = 10;
+    let b = 20;
+    let c = 30;
+
+    function restOpFn(...input) {
+      let sum = 0;
+      for (let i = 0; i < input.length; i++) {
+        sum += input[i];
+      }
+      console.log(sum);
+    }
+
+    restOpFn(10, 20, 30, 40);
+  };
+
+  // spreadAndRestOpFn();
+
   /************************************/
   /* Different ways to clone a object */
   /************************************/
+
   let cloneObjFn = () => {
     // Using spead operator
     let spreadObj1 = {
@@ -212,7 +245,7 @@ export function programsFn() {
 
   let numToBinaryFn = (num) => {
     console.log(num.toString(2));
-  }
+  };
 
   // numToBinaryFn(2);
 }

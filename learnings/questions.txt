@@ -47,6 +47,7 @@ JS: BASICS
 		      here 'this' refers to the object which used to call the method.
 	    - Constructor Invocation:
 	      - Constructor Invocation is performed when 'new' keyword is used followed by the function name
+          - here 'this' refers to the object which used to call the method.
 	        - let personObject = new Person('Zameer', 'Inamdar');
 	
 7.  What is settimeout, cleartimeout, setinterval and clearintervals methods in JS  OR what are webAPI methods 
@@ -55,6 +56,9 @@ JS: BASICS
       how  much time(in ms) it should be executed.
       Then number ID value is retured by setTimeOut function which needs to be passed into clearTimeout() to clear
       the timer.
+    - setInterval and clearInterval: setTimeut method repeats a given function at every given time-interval.
+      The number id value returned by setInterval() function is stored in a variable and it’s passed into the clearInterval()
+      function to clear the interval.
 
 8.  What are trim functions in JS?
     - trim(): Trim function removes the leading and trailing spaces from the string.
@@ -75,14 +79,15 @@ JS: BASICS
     - Currying is the technique in which function with multiple arguments is transformed into several functions of single
       argument.
       eg: function sum(a,b,c) is transformed to curriedFunction(a)(b)(c).
+
 ------------
 JS: ADVANCED
 ------------
+
 1.  What is hoisting in JS?
-    - In JS, Hoisting is the default behaviour of moving all the declaration at the top of the scope before
-      execution.
-      Basically, it gives us an advantage that no matter where functions and variables are declared, they are
-      moved to the top of their scope regardless of whether their scope is global or local.
+    - In JS, Hoisting is the default behaviour of moving all the declaration at the top of the scope before execution.
+      Basically, it gives us an advantage that no matter where functions and variables are declared, they are moved to 
+      the top of their scope regardless of whether their scope is global or local.
 
 2.  What are Transpilers and Polyfills?
     - Transpilers:  It is library which translate the source code to another source code.
@@ -112,8 +117,8 @@ JS: ADVANCED
                   user’s browser. 
 
 3.  What is Call, Apply and Bind in JS OR What is Function borrowing?
-    - Function borrowing: Function borrowing allows us to use the methods of one object on a different object
-                          without having to make a copy of that method.
+    - Function borrowing: Function borrowing allows us to use the methods of one object on a different object without 
+                          having to make a copy of that method.
     - Call:  It invokes the function and allows you to pass the arguments one by one.
     - Apply: It invokes the function and allows you to pass the arguments as an array.
     - Bind:  It returns a new function and allows you to pass the any number of arguments as array.
@@ -125,8 +130,8 @@ JS: ADVANCED
     - Filter: It filters the elements from Array and return array of element which statisfy the condition.
 
 5.  What is closure in JS?
-    - Closure is the combination of a function bundled together with reference to its surrounding 
-      state(the lexical enviournemnt)
+    - Closure is the combination of a function bundled together with reference to its surrounding state(the lexical
+      environment)
 
 6.  What is IIFE or Self Exceuting Anonymous Function?
     - IIFE is 'Immediately Invoking Expression' is JS function that run as soon as it is defined.
@@ -134,21 +139,21 @@ JS: ADVANCED
       - It contains two parts:
         - The first one is the anonymous function with lexical scope enclosed in ()
 	      - It prevents accessing variables within the IIFE as well as polluting the global scope.
-	    - The second part creates the immediate invoked function expression () through which JS engine will
-        directly interpret the function.
+	    - The second part creates the immediate invoked function expression () through which JS engine will  directly
+        interpret the function.
 
 7.  Encoding & Decoding of data in JS?
-    - When data needs to be transferred in API we can use data encoding and decoding we need to decode the data from 
-      the API.
+    - When data needs to be transferred via API we can use data encoding and we can decode data from the API.
     - Encoding btoa(): Binary to ASCII
     - Decoding atob(): ASCII to Binary.
 
-8.  What are spread operator and rest operator?
-    - Spread operator: It expands an array into elements
-    - Rest operator: collects multiple element and condenses it to single element
+8.  What are spread operator and rest parameter?
+    - Spread operator:  Spread operator allows an iterable to expand in places where 0+ arguments are expected.
+                        It expands an array into elements.
+    - Rest parameter: The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
  
 9.  What are Web workers and Service workers? 
-    - Web workers:  Web workers gives us the possibility to write the multi threaded Javascript, which does not block 
+    - Web workers:  Web workers gives us the possibility to write the multi threaded Javascript code, which does not block 
                     the DOM.
                     Useful to improve the performance of the web page.
     - Service workers:  Service worker is a script that runs independently in the browser background. On user side it can
