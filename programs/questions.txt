@@ -11,7 +11,7 @@ JS: Programs
 7.  Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position
 8.  Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]
 9.  Curring Functions eg: sum()()()()()?
-10. Polyfills for reduce function
-11. Polyfills for foreach
-12. Polyfills for subject and behaviour subject
-13. Converting number to binary?
+10. Converting number to binary?
+11. Polyfills for reduce function
+12. Polyfills for foreach
+13. Polyfills for subject and behaviour subject

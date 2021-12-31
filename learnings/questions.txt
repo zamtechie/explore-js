@@ -71,7 +71,10 @@ JS: BASICS
                                 However the arrow functions are only 'callable' and not 'constructible'. Thus we will get
                                 runtime error on trying to construct a 'non-constructible' arrow functions using new keyword.
 
-
+10. What are currying functions in JS?
+    - Currying is the technique in which function with multiple arguments is transformed into several functions of single
+      argument.
+      eg: function sum(a,b,c) is transformed to curriedFunction(a)(b)(c).
 ------------
 JS: ADVANCED
 ------------
@@ -242,33 +245,38 @@ JS: ADVANCED
 
 19. Explain event looping in JS? https://flaviocopes.com/javascript-event-loop/#:~:text=In%20general%2C%20in%20most%20browsers,handle%20API%20calls%20for%20example.
 
+    - JS is single threaded language.
+    - All function calls is maintain CALL-STACK(LIFO).
+    - If code contains anu platform API methods or event such as onclick eg setTimeout is present then its callback method is added in 
+      EVENT-QUEUE (FIFO). once call stack is empty then this callback function is added in the callback
+    - If code contains Promise then its resolve method is added in JOB-QUEUE which also a queue(FIFO). As soon as its resolve method is resolved it is 
+      push to CALL-STACK.
+    - JOB-QUEUE has higher preccedence then EVENT-QUEUE.
+
+20. What is $q.all?
+    - $q.all() is AngularJS method to combine all promises and return once promise.
+      If all promisis pass the combine promise is all pass.
+      If one of the promise is failed then the combine promise will fail.
+
 ---------------
 JS ARCHITECTURE
 ---------------
 
-- q.all
--. how to avoid nested for loop
-1. microservice
-2. How browser will know the new version
-file#code.js
-3. Denal of service.
-6. How do you handle security
-7. How to manage flash sale
-RabbitMQ
-8. Why micro-service are stateless?
-18. Microfront ends, webpack fedration
-19. How to manage state, pub sub parttern or emit emitters
-
-21. Performance from google chrome
-22. Microservice - 100 post each request to get like and comment
-24. electron framework
-24. cross site scripting attack example - sanitize html
-- How will you decide technology
-- How you decide which component develop
-how to logout from all tabs
-
-4. hacker request per second, how to avoid
-5. Thousand records 
+- What is lazy loading?
+- What is Denal of service.
+- how to avoid nested for loop
+- How do you handle security of web applicaton.
+- How will you increase the performance of web application.
+- How to check Performance of web application from google chrome
+- How browser will know the new version file#code.js
+- Microfront ends, webpack fedration
+- How will you decide which web technology to use?
+- How cross site scripting attack example - sanitize html
+- How to logout from all tabs
+- Why micro-service are stateless?
+- How to manage flash sale?
+- How you decide which component develop?
+- Thousand records 
 
 ----------
 MANAGEMENT

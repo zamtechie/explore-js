@@ -184,4 +184,35 @@ export function programsFn() {
     console.log(countObj);
   };
   // countOfDuplicateFn();
+
+  /***************************************/
+  /* Curring Functions eg: sum()()()()() */
+  /***************************************/
+
+  let curryingFn = () => {
+    function sum(a, b, c) {
+      return a + b + c;
+    }
+
+    function currySum(a) {
+      return function (b) {
+        return function (c) {
+          return a + b + c;
+        };
+      };
+    }
+    console.log(currySum(1)(2)(3));
+  };
+
+  // curryingFn();
+
+  /*******************************/
+  /* Converting number to binary */
+  /*******************************/
+
+  let numToBinaryFn = (num) => {
+    console.log(num.toString(2));
+  }
+
+  // numToBinaryFn(2);
 }

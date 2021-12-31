@@ -267,4 +267,30 @@ export function learningFn() {
   };
 
   // promiseFn();
+
+  /************************/
+  /*** Event Loop in JS ***/
+  /************************/
+
+  let eventLoopFn = () => {
+    setTimeout(function () {
+      console.log('In setTimeOut');
+    }, 0);
+
+    let promiseObj = new Promise((resolve, reject) => {
+      resolve('Promise resolver');
+    });
+
+    promiseObj.then(
+      function (message) {
+        console.log(message);
+      },
+      function (error) {
+        console.log(error);
+      }
+    );
+
+    console.log('In event Loop function');
+  };
+  // eventLoopFn();
 }
