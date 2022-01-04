@@ -16,3 +16,6 @@ JS: Programs
 12. Polyfills for reduce function
 13. Polyfills for foreach
 14. Polyfills for subject and behaviour subject
+15. Find the GCM of 4, 8?
+16. Find the LCM of 4, 8?
+17. 3 Kids and 5 Toyes which kid will get the last toy?

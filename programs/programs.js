@@ -248,4 +248,26 @@ export function programsFn() {
   };
 
   // numToBinaryFn(2);
+
+  /*******************************************************/
+  /* 3 Kids and 5 Toyes which kid will get the last toy? */
+  /*******************************************************/
+
+  let kidsToysFn = (kids, toys) => {
+    let kidsPos = 1;
+    while (toys > 0) {
+      if (kidsPos > kids) {
+        kidsPos = 1;
+      }
+
+      if (toys == 1) {
+        console.log('Last kid to get the toy is:', kidsPos);
+      }
+
+      toys--;
+      kidsPos++;
+    }
+  };
+
+  // kidsToysFn(3, 11);
 }
