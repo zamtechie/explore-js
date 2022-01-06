@@ -296,6 +296,98 @@ ES6 features:
 -------
 ANGULAR
 -------
+1.  What is an Angular framework?
+    Angular is a Javascript Binding framework which binds the HTML UI and JavaScript Model.
+    It is MVVM, MVC, MVP, MVW.
+    It helps to develop the SPA with the help of routing.
+
+2.  Difference between AngularJS and Angular?
+    - AngularJS is old 1.x family and Angular starts from verion 2, 4, 5, 6, 7, 8, 9(IVY)...
+    - AngularJS JS language is used and in Angular TypeScript language is used.
+    - There is ARCHITECTURE difference: in AngularJS we used Controllers and View use to load the controllers and 
+      in Angular is component based where component loads the View.
+    - Angular has a CLI where it is not available in AngularJS.
+    - AngularJS is not mobile compliant whereas the Angular is mobile compliant where we can use frameworks like
+      IONIC and develop the mobile application.
+    - AngularJS cannot be run on server side but Angular can be run at server side.
+
+3.  What are directives in Angular?
+    - Directives allow you to attach behaviour to your html DOM.
+    - It is an Angular syntaxs in HTML which go and change the behaviour of HTML DOM.
+
+4.  Explain different types of directives in Angular?
+    - There are 3 types of directives in Angular SAC: Structural, Attribute and Component.
+      - Structural Directives:  This directive changes the DOM layout by adding or removing the elements.
+                                Eg: *ngFor
+      - Attributes Directives:  This directive change the apperance and behaviour of HTML elements.
+                                <div [hidden]="hide()">Hello</div>
+      - Component Directives: It is directive with template. It's like a user control.
+
+5.  What is NPM and npm_modules folder?
+    - NPM: is the node package manager which helps to install js packages eg jquery.
+    - npm_modules:  it is the folder where all the packages are installed.
+
+6.  Explain the package.json file in Angular?
+    - Package.json file contains the references of all the JS packages we are using in the project.
+      npm install will install all the packages in one go.
+
+7.  What is TypeScript and why do we need it?
+    - TypeScript is the superset of Javascript and it adds types to the JavaScript.
+      Eg: let x:number = 1;
+      x = 'number'; ---> this will give compile time error.
+    - It gives the Object orientation evnviornment which transpiles/converts to JavaScript.
+      eg:
+      class Customer {
+
+      }
+      class CustomerChild extends Customer {
+
+      }
+
+      Command: tsc name.ts  --- converts to name.js
+
+8.  Explain importance of Angualar CLI?
+    - Angular CLI is command line interface by which we can create initial Angular project template. So rather than
+      starting from scratch we have some boiler plate to start with.
+      Also we can create components, services using CLI.
+      Command to install CLI is: npm install @angular/cli
+      Command to create angular project is: ng new <proj-name>
+
+9.  What is the component and modules in Angular?
+    - Component: Component is where we write the binding code between View and Model.
+    - Modules:  Logicall groups the components.
+
+10. Explain the importance of decorators in Angular?
+    - Decorator defines what kind of class is it.
+      Eg: if we decorate '@Component' then it says it's an Angular Component and if we put '@NgModule' it becomes
+          an Angular Module.
+
+11. What are Annotation or MetaData in Angular?
+    - Same as question 10.
+
+12. What are templates in Angular?
+    - Template is an HTML view of Angular in which we can write the html/directive code.
+    - There are two types of defining templates one is inline and other is separate file.
+      Eg:
+      @Component({
+        selector: "app-component",
+        template: "<b>test</b>"
+        templateUrl: "./customer.html"
+      })
+
+13. Explaing different (four) types of data binding in Angular?
+    - Data binding defines how the View and Component communicate with each other.
+    - There are four types of binding in Angular:
+      - Expresson/Interpolation {{}}: Data flow from Component to the View.
+      - Property binding []:  Data flows from Component to the View and it is binded to the property of HTML tag.
+      - Event binding (): When you want to send the event from View to Component.
+      - Two way binding [()]: Data flow from View to Component and vice versa.
+
+      Eg: <input [(ngModel)]="customerObj.name" />        --->  Two way binding
+          {{customerObj.name}}                            --->  Expression/Interpolation Binding
+          <div [hidden]="customerObj.show">Hello</div>    --->  One way of binding
+          <button (click)="btnClicked()"></button>        --->  Event Binding
+
 
 13. Promises vs timeout promisis has preccedence than any other function
 14. Declaretive vs Imperative React/angular is declaretive and js is imperative
