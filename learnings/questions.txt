@@ -263,6 +263,11 @@ JS: ADVANCED
       If all promisis pass the combine promise is all pass.
       If one of the promise is failed then the combine promise will fail.
 
+21. What is higher order functions?
+22. promise async await
+23. How to know which component called the method? console.trace()
+24. How to ensure you are getting the latest store in redux?
+
 ---------------
 JS ARCHITECTURE
 ---------------
@@ -297,9 +302,9 @@ ES6 features:
 ANGULAR
 -------
 1.  What is an Angular framework?
-    Angular is a Javascript Binding framework which binds the HTML UI and JavaScript Model.
-    It is MVVM, MVC, MVP, MVW.
-    It helps to develop the SPA with the help of routing.
+    - Angular is a Javascript Binding framework which binds the HTML UI and JavaScript Model.
+      It is MVVM, MVC, MVP, MVW.
+      It helps to develop the SPA with the help of routing.
 
 2.  Difference between AngularJS and Angular?
     - AngularJS is old 1.x family and Angular starts from verion 2, 4, 5, 6, 7, 8, 9(IVY)...
@@ -344,7 +349,7 @@ ANGULAR
 
       }
 
-      Command: tsc name.ts  --- converts to name.js
+      Note: Command: tsc name.ts  --- converts to name.js
 
 8.  Explain importance of Angualar CLI?
     - Angular CLI is command line interface by which we can create initial Angular project template. So rather than
@@ -387,6 +392,153 @@ ANGULAR
           {{customerObj.name}}                            --->  Expression/Interpolation Binding
           <div [hidden]="customerObj.show">Hello</div>    --->  One way of binding
           <button (click)="btnClicked()"></button>        --->  Event Binding
+
+14. Explain the Architecture of Angualar/Describe mail pillars of Angular?
+    - There are 7 important pillars of Angular:
+      1.  Template:   The HTML view of Angular.
+      2.  Component:  Binds the view and model.
+      3.  Modules:    Groups the components logically.
+      4.  Bindings:   Defines how View and Component communicate.
+      5.  Directives: Changes the DOM behaviour.
+      6.  Services:   Helps to share common login across the project.
+      7.  DI:         Dependency injection helps to inject instance across constructor.
+
+15. What is a SPA?
+    - SPA stands for Single Page Application.
+    - SPA are applications where the main UI gets loaded once and then the needed UI is loaded on demand.
+
+16. How to implement SPA? What is routing in Angular?
+    - In Angular SPA can be implemented with the help of Routing.
+    - Routing is a simple collection which has two things URL and when this URL is called which component to load.
+    - Routing helps you to define the navigation for your Angular application.
+
+17. How to implement Routing in Angular?
+    - First step is to define a collection which contains for which URL which component needs to be loaded.
+      Eg: appRoutes = {
+        path: '', component: HomeComponent,
+        path: 'Home', component: HomeComponent
+      }
+    - Then in HTML you define the <router-outlet> where the page will be loaded.
+      Eg: <router-outlet></router-outlet>
+    - Also need to define the [routerLink]
+      Eg: <a [routerLink]="['Home]">Home</a>
+    - If we need to navigate via script then we need to call this.router.navigate()
+      Eg: this.router.navigate(['/Home'])
+
+18. What is lazy loading in Angular?
+    - Lazy loading means on demand loading. Loading only necessary HTML, CSS and Javascript files so that you have
+      better performance.
+
+19. How to implement Lazy Loading in Angular?
+    - To implement Lazy loading in Angular you need to do two things.
+      - First divide your project into separate separate modules.
+      - And then the module you want to do Lazy loading use 'loadChildren' in your route collection.
+
+20. What are services in Angular?
+    - Services helps us to share common logic across Angular projects.
+      Eg: Logger, Validations, HTTP services.
+
+21. What is Dependency Injection?
+    - Dependency Injection is an application design pattern where rather than creating object instances from within
+      the component, Angular injects it via the constructor.
+
+22. How to implement the Dependency Injection?
+    - To do Dependency Injection in Angualar we need to use the 'providers' property which is available in @NgModule decorator.
+      And then you can go to your component in construtor we say give service
+      Eg: 
+      In Module file:
+      @NgModule({
+        providers: [
+          { provide: BaseLogger, useClass: HttpLogger}
+        ]
+      })
+
+      In component file:
+      constructor(public l: BaseLogger)
+
+23. What is the benefit of Dependency Injection?
+    - Dependency Injection helps to decouple class dependencies, so that when you add new dependencies you do not have to do
+      changes everywhere in project.
+
+24. What is the difference between 'ng serve' and 'ng build'?
+    - 'ng serve' builds inmemory while 'ng build' builds on the hard disk, so actually it goes and creates dist folder and put all
+      compiled code in this folder.
+      So when you want to go for production build 'ng build' command is used.
+
+25. Explain the --prod parameter in 'ng build'?
+    - '--prod' compresses your JS file, remove comments, creates GUIDs of your JS files and make your application ready for
+      production.
+
+26. Explain ViewChild and ViewChildren?
+    - ViewChild and ViewChidren helps us to refer the HTML elements of the View.
+    - ViewChild is use to refering only single element and ViewChildren is to refer the collection.
+
+    - Eg:
+      <div #div1>Hello</div>
+      <comp2>
+        <p>Hello Component 2 element 1</p>
+      </comp2>
+      <comp2>
+        <p>Hello Component 2 element2</p>
+      </comp2>
+
+      @ViewChild('div', { static: false }) divref ....
+      @ViewChild(comp2, { static: false }) tref ....
+      @ViewChildren(comp2) myComponent: QueryList<comp2>
+
+27. Why do we need template reference variables?
+    - A template reference variable is used to give reference to the DOM Element, a component, directive, or a web component within
+      a template
+
+28. What is ContentProjection?
+    - Content Projection is scenario where we need project html content from Parent Component to Child Component
+    - Content from parent component will be shown inside of <ng-content> tag of child component.
+
+    Component 1: 
+    <comp> <p> hello component 2 </p></comp>
+
+    Component 2:
+    <ng-content></ng-content>
+
+29. Explain Content Projection Slot?
+    - If we have multiple ng-content tag in Child Component and we want to show specific content inside specific slot.
+
+    Eg:
+    Parent Component:
+    <comp> 
+      <p> hello component 2 </p>
+      <p slot1> hello component 2 - slot 1</p>
+      <p slot2> hello component 2 - slot 2</p>
+    </comp>
+     
+    Child Component:
+
+    <ng-content></ng-content>
+    <ng-content select="slot1"></ng-content>
+    <ng-content select="slot2"></ng-content>
+
+
+
+30. What is ContentChild and ContentChildren?
+    - ContentChild and ContentChildren helps us to access the projected content from the Parent Component.
+    Eg:
+    Component 1
+    <comp2>
+      <p #projectedcontent>Projected Item 1</p>
+      <p #projectedcontent>Projected Item 2</p>
+    </comp2>
+
+    Component 2
+    <ng-content>
+    </ng-content>
+
+    Component 2 TS:
+    @ContentChild("projectedcontent")
+    @ContentChildren("projectedcontent")
+
+31. ViewChild vs ViewChidren vs ContentChild vs ContentChildren?
+    - "ViewChild and ViewChildren" will helpful for accessing the HTML elements of its own view.
+    - "ContentChild and ContentChildren" will helpful for accessing the HTML elements which are Projected by the Parent.
 
 
 13. Promises vs timeout promisis has preccedence than any other function
