@@ -308,16 +308,16 @@ ANGULAR
 
 2.  Difference between AngularJS and Angular?
     - AngularJS is old 1.x family and Angular starts from verion 2, 4, 5, 6, 7, 8, 9(IVY)...
-    - AngularJS JS language is used and in Angular TypeScript language is used.
-    - There is ARCHITECTURE difference: in AngularJS we used Controllers and View use to load the controllers and 
-      in Angular is component based where component loads the View.
+    - In AngularJS JS language is used and in Angular TypeScript language is used.
+    - There is ARCHITECTURE difference: in AngularJS we used Controllers and View loads the controllers and 
+      in Angular is component based where Component loads the View.
     - Angular has a CLI where it is not available in AngularJS.
     - AngularJS is not mobile compliant whereas the Angular is mobile compliant where we can use frameworks like
       IONIC and develop the mobile application.
     - AngularJS cannot be run on server side but Angular can be run at server side.
 
-3.  What are directives in Angular?
-    - Directives allow you to attach behaviour to your html DOM.
+3.  What are 'Directives' in Angular?
+    - Directives allows you to attach behaviour to your html DOM.
     - It is an Angular syntaxs in HTML which go and change the behaviour of HTML DOM.
 
 4.  Explain different types of directives in Angular?
@@ -393,7 +393,7 @@ ANGULAR
           <div [hidden]="customerObj.show">Hello</div>    --->  One way of binding
           <button (click)="btnClicked()"></button>        --->  Event Binding
 
-14. Explain the Architecture of Angualar/Describe mail pillars of Angular?
+14. Explain the Architecture of Angualar/Describe main pillars of Angular?
     - There are 7 important pillars of Angular:
       1.  Template:   The HTML view of Angular.
       2.  Component:  Binds the view and model.
@@ -435,7 +435,7 @@ ANGULAR
       - And then the module you want to do Lazy loading use 'loadChildren' in your route collection.
 
 20. What are services in Angular?
-    - Services helps us to share common logic across Angular projects.
+    - Services helps us to share common logic across Angular project.
       Eg: Logger, Validations, HTTP services.
 
 21. What is Dependency Injection?
@@ -540,6 +540,96 @@ ANGULAR
     - "ViewChild and ViewChildren" will helpful for accessing the HTML elements of its own view.
     - "ContentChild and ContentChildren" will helpful for accessing the HTML elements which are Projected by the Parent.
 
+32. Explain the importance of Component Life Cycle? What are exactly Angular Component Hooks? Explain the LifeCycle or
+    events in Angular Components?
+    - Angular component hooks are nothing but readymade events provided by Angular which developer can use it and write
+      the custome code. For example if we want to write some initialization then we can use 'ngOnInit' event, if we need
+      to write any cleanup code once the component is unloaded then we can use 'ngOnDestroy'
+
+33. Explain Events and Sequence of Component Life cycle?
+    - Complete lifecyle Angular events can be divided into two parts the first are those sequence of events which are
+      fired when Component is loaded first time and second sequence of events are those events which are fired on every
+      change detection.
+
+      Hooks fired when Component loaded first time:
+      - Constructor:  Constructor is and event of TypeScript class, it will fire irrespect of Angular.
+      - ngOnChanges:  ngOnChanges is called when data bounded to input elements changes.
+      - ngOnInit:     ngOnInit is called when data bound properties are displayed on screen. And it is where the input values
+                      are set.
+      - ngDoCheck:    ngDoCheck is called when ever Angular change detection runs, so whenever Angular runs change Detection it
+                      is invoked.
+      - ngAfterContentInit: ngAfterContentInit is called after Angular projects external content into the component View.
+      - ngAfterContentCheck:  ngAfterContentCheck is called after Angular checks content projected.
+      - ngAfterViewInit:  After Angular initializes components, View, ChildVIews and projected Content then ngAfterViewInit is
+                          fired.
+      - ngAfterViewChecked: So after default 'View Detection' ran , content checked ran, after that 'ngAfterViewChecked' is run.
+      - ngDestroy:  When component is unloaded then 'ngDestroy' event is fired.
+
+      Hooks fired when change detection:
+      - So whenever changes occur in View eg: when input value is changed then change detections hooks are fired.
+      - ngOnChanges:
+      - ngDoCheck:
+      - ngAfterContentChecked:
+      - ngAfterViewChecked:
+
+34. Constructor VS ngOnInit()? What kind of code you will put in Constructor and in ngOnInit?
+    - Constructor:  - Constructor is a TypeScript concept it is invoked by TypeScript framework.
+                    - There is not way to access html DOM element since View and Component are not initialized.
+                    - Initials the class member variables and can do Dependency Injection.
+    - ngOnInit: - ngOnInit is an Angular concept and it is invoked by Angular framework.
+                - At this time Component is initialized and View binding is done so here we can write initializing code as well
+                  as initializing of class member variables also loading of grid, enable/disabling UI etc
+
+35. How to make HTTP calls using Angular?
+    - Import 'HttpClientModule' at the module level.
+    - Import 'HttpClient' from '@angular/common/http'.
+    - Create object of 'HttpClient' using 'Dependency Injection'.
+    - We can make 'post' or 'get' call using 'HttpClient'.
+    - Using subscribe function handle the success and error response.
+
+36. What is the need of Subscribe function? 37. How to handle errors when HTTP fails?
+    - subscribe function is use to handle success and error response from server.
+    - subscribe function has first success callback function and second one is the error callback function.
+
+38. How to pass the data between components? 39. What are Input, Output and event Emitters? 40. How to pass data during routing?
+    - Scenario 1: Parent child component scenario.
+                  - To pass data from Parent component to Child component we can use 'Input' decorator.
+                  - To pass data from Child component to Parent component we can use 'Output' decorator and by using 'EventEmitter' we can emit.
+                  - We can also use 'ViewChild' decorator and pass data directly also.
+
+    - Scenario 2: When you are navigating from one component to another component.
+                  - we can use queryparams
+    - Scenario 3: Using service
+
+41. Is it a good practice to pass data using services ?
+    - No, since service can be use to share the data across the components.
+
+42. What is the need of Angular Pipes?
+    - Pipes helps to transform data on Angular UI expression from one format to another format.
+      Eg: <p> Hello {{'world' | uppercase }}
+
+43. Can you name some built-in Angular Pipes?
+    - 
+
+44. How to create Custom pipes in Angular?
+    - Custome pipe can be creating by implementing the PipeTransform
+
+    UI:
+    {{ 2 | sqaure }}
+
+    Pipe ts:
+    import { Pipe, PipeTransform } from '@angular/core';
+
+    @Pipe({
+      name: 'square'
+    })
+
+    export class SquarePipe implements PipeTransform {
+
+      transform(value: number) {
+        return value * value;
+      }
+    }
 
 13. Promises vs timeout promisis has preccedence than any other function
 14. Declaretive vs Imperative React/angular is declaretive and js is imperative
