@@ -706,6 +706,30 @@ ANGULAR
     - Reactive programming is where we register a callback and the stream is resposible to push data.
     - Some developers also consider it as publisher and subsciber model as well.
 
+56. What are interceptor in Angular?
+    - Interceptor helps us to execute pre-processing login before any HTTP call is made from Angular applicaiton.
+
+57. How to implement interceptors?
+    - First create a class which has the pre-processing login and this class should implememt 'HttpInterceptor' interface.
+    - Dependency inject the pre-processing class at module level using providers.
+
+58. Give some usecase of HttpInterceptor?
+    - Authentication: In every call we would want to attach the JWT token. This can be done by attaching the token in the headers
+                      before call is made.
+    - Modifiying URL: If we want to modify url before API call we do that using Interceptors.
+    - Caching:  Take data from cache rather making a api call. Do before HTTP call is executed you can look up in the local
+                cache, get data and cancel the expensive HTTP call to server.
+    - Modify Request and Response payloads: If we want to modify the request and reponse payload than we can do it via Interceptors
+
+59. Can we have multiple Interceptors?
+    - Yes we can fire multiple Interceptors in pre-processing by defining interceptors in the provider and specify 'multi' value 
+      to true.
+    - As per the sequence provided in the providers interceptor will fire in that sequence.
+    Eg:
+      providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: <classname1>, multi: true }
+        { provide: HTTP_INTERCEPTORS, useClass: <classname2>, multi: true }
+      ]
 13. Promises vs timeout promisis has preccedence than any other function
 14. Declaretive vs Imperative React/angular is declaretive and js is imperative
 23. web pack
