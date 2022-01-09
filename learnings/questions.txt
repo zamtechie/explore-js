@@ -631,6 +631,81 @@ ANGULAR
       }
     }
 
+45. What's the full form of RxJS?
+    - RxJS stands for Reactive extentions for JavaScript.
+
+46. What is the purpose of RxJS?
+    - Main purpose of RxJS is to handle Asynchronous data stream easily.
+    Note: Asynchronous data can be http response, Timer or port.
+
+47. What are Observables and Observer in RxJS?
+    - Observable and Observerver is RxJS objects to handle Asynchronous data stream.
+    - Observable represents Asynchronous data stream and Observer is nothing but a function which will subscribe the
+      Observable and listent to the data stream.
+
+48. Explain the Subscribe with sample code?
+    - Goal of Subscribe is to attach the listener to the Observable.
+
+    Eg:
+    import { Observable } from 'rxjs';
+    import { map, filter } from 'rxjs/operator';
+    function AsyncStream(observer){
+      setTimer(()=> {
+        observer.next(Math.random()*10);
+      }, 1000)
+    }
+
+    var mainObservableObj = Observable.create(AsyncStream);
+
+    var filterObservalObj = mainObservableObj.pipe(filter( x =>  x > 4));
+
+
+
+    var subscriptionObj = filterObservalObj.subscribe(res => {
+      observerFn(res);
+    });
+
+
+
+
+    function observerFn(data) {
+      console.log(data);
+      filterObservalObj.unsubsribe();
+    }
+
+49. How to to unsubsribe the Observable stream in RxJS?
+    - We can unsubsribe observable using <Observable Object>.unsubsribe method.
+
+50. Explain concept of operators with Sample code?
+    - Operator is nothing but a small piece of logic that will change one observable stream to another observable stream
+      using Pipe.
+
+51. How to install RxJS?
+    - npm install rxjs
+
+52. Differentiate between RxJS and Promise?
+    - Observable return the stream of data and Promise return a single value.
+    - We can subscribe and unsubsribe stream and we cannot cancel the Promise.
+
+53. How you have used RxJS in Angular project?
+    - RxJS is used mostly with HTTP calls since it returns stream of data/Observable.
+
+54. What kind of RxJS operator you have used uptill now:
+    - Map:  Transform data in a Observable into a different format.
+    - Filter: Filter the data based on filter criteria
+    - From: This operator will turn Array, Promise or Iterable into an Observable.
+    - Delay:  Emits a value with delay.
+    - Pluck:
+    - Merge:
+    - Concat:
+
+55. What is Push/Reative vs Pull/Imperative programming?
+    - RxJS is Reative programing.
+    - Imperator programming is where caller code keeps the callee to get the stream of data. So Listerner code is responsible
+      to pull stream of Data. Eg: Polling API.
+    - Reactive programming is where we register a callback and the stream is resposible to push data.
+    - Some developers also consider it as publisher and subsciber model as well.
+
 13. Promises vs timeout promisis has preccedence than any other function
 14. Declaretive vs Imperative React/angular is declaretive and js is imperative
 23. web pack
