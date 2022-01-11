@@ -288,6 +288,8 @@ JS ARCHITECTURE
 - How you decide which component develop?
 - Thousand records 
 
+- 
+
 ----------
 MANAGEMENT
 ----------
@@ -609,7 +611,11 @@ ANGULAR
       Eg: <p> Hello {{'world' | uppercase }}
 
 43. Can you name some built-in Angular Pipes?
-    - 
+    - CurrencyPipe: {{ 1234.56 | currency:'USD' }} => $1234.56
+    - DecimalPipe: {{ 3.14159265 | number: '3.1-2' } => 003.14
+    - LowerCasePipe: <p> Hello {{'woRLD' | uppercase }} = Hello WORLD
+    - UpperCasePipe: <p> Hello {{'woRLD' | lowercase }} = Hello world
+    - DatePipe: {{ dateVal | date: 'shortTime' }} => 4:38 PM
 
 44. How to create Custom pipes in Angular?
     - Custome pipe can be creating by implementing the PipeTransform
@@ -639,9 +645,9 @@ ANGULAR
     Note: Asynchronous data can be http response, Timer or port.
 
 47. What are Observables and Observer in RxJS?
-    - Observable and Observerver is RxJS objects to handle Asynchronous data stream.
+    - Observable and Observer is RxJS objects to handle Asynchronous data stream.
     - Observable represents Asynchronous data stream and Observer is nothing but a function which will subscribe the
-      Observable and listent to the data stream.
+      Observable and listen to the data stream.
 
 48. Explain the Subscribe with sample code?
     - Goal of Subscribe is to attach the listener to the Observable.
@@ -659,14 +665,9 @@ ANGULAR
 
     var filterObservalObj = mainObservableObj.pipe(filter( x =>  x > 4));
 
-
-
     var subscriptionObj = filterObservalObj.subscribe(res => {
       observerFn(res);
     });
-
-
-
 
     function observerFn(data) {
       console.log(data);
@@ -699,7 +700,7 @@ ANGULAR
     - Merge:
     - Concat:
 
-55. What is Push/Reative vs Pull/Imperative programming?
+55. What is Push/Reactive vs Pull/Imperative programming?
     - RxJS is Reative programing.
     - Imperator programming is where caller code keeps the callee to get the stream of data. So Listerner code is responsible
       to pull stream of Data. Eg: Polling API.
@@ -707,16 +708,16 @@ ANGULAR
     - Some developers also consider it as publisher and subsciber model as well.
 
 56. What are interceptor in Angular?
-    - Interceptor helps us to execute pre-processing login before any HTTP call is made from Angular applicaiton.
+    - Interceptor helps us to execute pre-processing logic before any HTTP call is made from Angular applicaiton.
 
 57. How to implement interceptors?
-    - First create a class which has the pre-processing login and this class should implememt 'HttpInterceptor' interface.
+    - First create a class which has the pre-processing logic and this class should implememt 'HttpInterceptor' interface.
     - Dependency inject the pre-processing class at module level using providers.
 
 58. Give some usecase of HttpInterceptor?
     - Authentication: In every call we would want to attach the JWT token. This can be done by attaching the token in the headers
                       before call is made.
-    - Modifiying URL: If we want to modify url before API call we do that using Interceptors.
+    - Modifiying URL: If we want to modify url before API call we can do that using Interceptors.
     - Caching:  Take data from cache rather making a api call. Do before HTTP call is executed you can look up in the local
                 cache, get data and cancel the expensive HTTP call to server.
     - Modify Request and Response payloads: If we want to modify the request and reponse payload than we can do it via Interceptors
