@@ -220,7 +220,7 @@ JS: ADVANCED
 
 12. What is web sockets?
 
-13. What is callback hell?
+13. What is callback hell? OR What is Pyramid of Doom?
     - Callback functions are nothing but functions that take some time to produce a result.
     - When we have a nested callbacks methods where each callback function takes an argument that is a result from 
       previous callbacks, the code structure becomes complex and difficult to read and maintain.
