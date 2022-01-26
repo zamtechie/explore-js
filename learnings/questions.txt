@@ -280,10 +280,11 @@ JS: ADVANCED
 
 19. Explain event looping in JS? https://flaviocopes.com/javascript-event-loop/#:~:text=In%20general%2C%20in%20most%20browsers,handle%20API%20calls%20for%20example.
 
+    - The event loop is a constantly running process that monitors both the callback queue and the call stack
     - JS is single threaded language.
     - All function calls is maintain CALL-STACK(LIFO).
-    - If code contains anu platform API methods or event such as onclick eg setTimeout is present then its callback method is added in 
-      EVENT-QUEUE (FIFO). once call stack is empty then this callback function is added in the callback
+    - If code contains any platform API methods or event such as onclick eg setTimeout is present then its callback method is added in 
+      CALLBACK-EVENT-QUEUE (FIFO). once call stack is empty then this callback function is added in the callback
     - If code contains Promise then its resolve method is added in JOB-QUEUE which also a queue(FIFO). As soon as its resolve method is resolved it is 
       push to CALL-STACK.
     - JOB-QUEUE has higher preccedence then EVENT-QUEUE.
