@@ -280,7 +280,10 @@ JS: ADVANCED
 
 19. Explain event looping in JS? https://flaviocopes.com/javascript-event-loop/#:~:text=In%20general%2C%20in%20most%20browsers,handle%20API%20calls%20for%20example.
 
-    - The event loop is a constantly running process that monitors both the callback queue and the call stack
+    - The event loop is a constantly running process that monitors both the callback queue and the call stack.
+    - If the call stack is not empty, the event loop waits until it is empty and places the next function from 
+      the callback queue to the call stack. If the callback queue is empty, nothing will happen.
+
     - JS is single threaded language.
     - All function calls is maintain CALL-STACK(LIFO).
     - If code contains any platform API methods or event such as onclick eg setTimeout is present then its callback method is added in 
@@ -446,11 +449,18 @@ ANGULAR
     - Routing helps you to define the navigation for your Angular application.
 
 17. How to implement Routing in Angular?
-    - First step is to define a collection which contains for which URL which component needs to be loaded.
+    - First step is to create 'AppRoutingModule' and import it in our main module in imports.
+    - AppRoutingModule should include import { Routes, RouterModule } from '@angular/router';
+    - In AppRoutingModule define a collection which contains for which URL which component needs to be loaded.
       Eg: appRoutes = {
         path: '', component: HomeComponent,
         path: 'Home', component: HomeComponent
       }
+    - Then in imports add RouterModule.forRoot(appRoutes)
+      @NgModule({
+        imports: [RouterModule.forRoot(appRoutes)],
+        exports: [RouterModule]
+      })
     - Then in HTML you define the <router-outlet> where the page will be loaded.
       Eg: <router-outlet></router-outlet>
     - Also need to define the [routerLink]
