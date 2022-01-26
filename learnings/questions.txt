@@ -329,6 +329,31 @@ JS ARCHITECTURE
 - how to avoid nested for loop
 - How do you handle security of web applicaton.
 - How will you increase the performance of web application.
+  https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
+  1.  Make use of CDN links to load the external resources.
+  2.  Move your website to a better host:
+      There are three possible types of hosting:
+        - Shared hosting - cheap and slow
+        - Virtual Private Servers (VPS) hosting - expensive and faster
+        - Dedicated server - very expensive and very fast.
+  3.  Optimize the size of images on your website:
+      The best way to reduce the image size without compromising its quality is to compress images using such tools as 
+      'ImageOptim', 'JPEGmini', or 'Kraken'. 
+      Use of sprite image for icon so it will be loaded only one time.
+  4.  Use website caching:
+  5.  Implement Gzip Compression:
+      Gzip Compression is an effective way to reduce the size of files. It minimizes the HTTP requests and reduces the server
+      response time. Gzip compresses the files before sending them to the browser. On the user side, a browser unzips the
+      files and presents the contents. This method can work with all files on your website. You can enable Gzip on your
+      website by adding some lines of the code or via a utility called gzip.
+  6.  Reduce the use of web fonts:
+      Web fonts have become very popular in website design. Unfortunately, the use of web fonts has a negative impact on the
+      speed of page rendering. Web fonts add extra HTTP requests to external resources. The following measures will help you
+      reduce the size of web font traffic.
+      Use modern formats WOFF2 for modern browsers;
+      Include only those character sets that are used on the site;
+      Choose only the needed styles
+
 - How to check Performance of web application from google chrome
 - How browser will know the new version file#code.js
 - Microfront ends, webpack fedration
@@ -340,8 +365,20 @@ JS ARCHITECTURE
 - How you decide which component develop?
 - Thousand records 
 
-- 
+- What is the difference between linking to an image, a website, and an email address?
+  The HTML img tag is used to link an image to a website.
+  The HTML anchor tag is used to link a website by adding the path of the website in the hypertext reference (href) attribute.
+  To link an email address, we specify mailto at the beginning of the email address and pass this path in the href attribute of
+  the anchor tag.
 
+- What’s the difference between standards mode and quirks mode?
+  There are now three modes used by the layout engines in web browsers: quirks mode, almost standards mode, and full standards
+  mode. In quirks mode, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5. This is essential in order
+  to support websites that were built before the widespread adoption of web standards. In full standards mode, the behavior is
+  (hopefully) the behavior described by the HTML and CSS specifications. In almost standards mode, there are only a very small
+  number of quirks implemented.
+
+- What kind of things must you be wary of when the design or developing for multilingual sites?
 ----------
 MANAGEMENT
 ----------
