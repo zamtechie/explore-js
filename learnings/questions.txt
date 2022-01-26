@@ -452,13 +452,13 @@ ANGULAR
     - First step is to create 'AppRoutingModule' and import it in our main module in imports.
     - AppRoutingModule should include import { Routes, RouterModule } from '@angular/router';
     - In AppRoutingModule define a collection which contains for which URL which component needs to be loaded.
-      Eg: appRoutes = {
-        path: '', component: HomeComponent,
-        path: 'Home', component: HomeComponent
-      }
-    - Then in imports add RouterModule.forRoot(appRoutes)
+      Eg: const routes: Routes = [
+          { path: 'first-component', component: FirstComponent },
+          { path: 'second-component', component: SecondComponent },
+        ];
+    - Then in imports add RouterModule.forRoot(routes)
       @NgModule({
-        imports: [RouterModule.forRoot(appRoutes)],
+        imports: [RouterModule.forRoot(routes)],
         exports: [RouterModule]
       })
     - Then in HTML you define the <router-outlet> where the page will be loaded.
