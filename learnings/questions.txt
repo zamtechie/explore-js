@@ -302,6 +302,24 @@ JS: ADVANCED
 23. How to know which component called the method? console.trace()
 24. How to ensure you are getting the latest store in redux?
 
+25. What is 'prototype' object? Or Why JS language is also known as prototyping language?
+    - The prototype object is special type of enumerable object to which additional properties can be attached to it which will
+      be shared across all the instances of it's constructor function.
+      Eg: 
+      function Student(name, gender) {
+        this.name = name;
+        this.gender = gender;
+      }
+
+      Student.prototype.age = 15;
+
+      var studObj1 = new Student('Ranga', 'M');
+      alert(studObj1.name+", "+studObj1.age); // 15
+
+      var studObj2 = new Student('Zameer', 'M');
+      studObj2.age = 35;
+      alert(studObj2.name+", "+studObj2.age); // 35
+
 ---------------
 JS ARCHITECTURE
 ---------------
