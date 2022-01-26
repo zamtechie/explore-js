@@ -134,6 +134,35 @@ JS: ADVANCED
     In other words, a closure gives you access to an outer function’s scope from an inner function.
     In JavaScript, closures are created every time a function is created, at function creation time.
 
+    Practical example of closure is of emulating of private methods and variables. JS does not provide this functionality
+    by default:
+
+    let counter = (function() {
+
+      var privateCounter = 0;
+      function changeCounter(val) {
+        privateCounter += val;
+      }
+
+      return {
+        increment: function() {
+          changeCounter(1);
+        },
+        decrement: function() {
+          changeCounter(-1);
+        },
+        getCounter: function() {
+          return privateCounter;
+        }
+      }
+    })();
+
+    counter.increment();
+    console.log(counter.getCounter());
+    counter.decrement();
+    console.log(counter.getCounter());
+
+
 6.  What is IIFE or Self Exceuting Anonymous Function?
     - IIFE is 'Immediately Invoking Expression' is JS function that run as soon as it is defined.
     - It is also known as design pattern as 'Self Exceuting Anonymous Function'
