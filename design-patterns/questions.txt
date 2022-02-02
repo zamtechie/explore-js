@@ -1,5 +1,5 @@
 -------------------
-JS: Design Patterns
+JS: Design Patterns - https://www.patterns.dev/posts/classic-design-patterns/#categoriesofdesignpatterns
 -------------------
 
 1.  What is Modular Design Pattern? https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s02.html
