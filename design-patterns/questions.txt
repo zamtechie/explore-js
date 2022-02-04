@@ -6,11 +6,137 @@ JS: Design Patterns - https://www.patterns.dev/posts/classic-design-patterns/#ca
     - Modular Pattern is used to emulate the concept of classes in such a way that we are able to include both 
       Private/Public methods or variables in a single object, thus shielding particular parts from global scope.
 
-2. What is Singleton Design Pattern?
+2.  What is the Constructor Design Pattern?
+    - 'Constructor' is a special function which is used to initialised the new created object once memory is 
+      allocated to the object.
 
-3. What is Factory Design Pattern?
+      In JS, as almost everything is an object, we are more often interested in object construtors.
 
-4. Pub-sub/Event Emitter Design Pattern?
+    - Object constructors are used to create specific types of objects—both preparing the object for use and
+      accepting arguments a constructor can use to set the values of member properties and methods when the
+      object is first created.
 
-5. What is Facade Design Pattern?
+    - In ES5 we use the function name itself as the constructor and in ES6 'class' concept was introduced which 
+      has the constructor method.
 
+      Eg:
+      function Car( model, year, miles ) {
+        this.model = model;
+        this.year = year;
+        this.miles = miles;
+
+        this.toString = function () {
+          return this.model + " has done " + this.miles + " miles";
+        };
+      }
+
+    - Constructors with Prototypes
+      - Functions in JavaScript have a property called a prototype. When we call a JavaScript constructor to
+        create an object, all the properties of the constructor’s prototype are then made available to the new
+        object. In this fashion, multiple Car objects can be created that access the same prototype.
+
+        Eg:
+        function Car( model, year, miles ) {
+          this.model = model;
+          this.year = year;
+          this.miles = miles;
+        }
+
+        Car.prototype.toString = function () {
+          return this.model + " has done " + this.miles + " miles";
+        };
+
+2.  What is Singleton Design Pattern?
+    - The Singleton pattern is thus known because it restricts instantiation of a class to a single object.
+      Classically, the Singleton pattern can be implemented by creating a class with a method that creates a new
+      instance of the class if one doesn’t exist. In the event of an instance already existing, it simply returns
+      a reference to that object. 
+
+    - Singletons differ from static classes (or objects) as we can delay their initialization, generally because
+      they require some information that may not be available during initialization time.
+
+      Eg:
+      var mySingleton = (function () {
+
+      // Instance stores a reference to the Singleton
+      var instance;
+
+      function init() {
+
+        // Singleton
+        // Private methods and variables
+        function privateMethod(){
+            console.log( "I am private" );
+        }
+
+        var privateVariable = "Im also private";
+
+        var privateRandomNumber = Math.random();
+
+        return {
+
+          // Public methods and variables
+          publicMethod: function () {
+            console.log( "The public can see me!" );
+          },
+
+          publicProperty: "I am also public"
+
+          getRandomNumber: function() {
+            return privateRandomNumber;
+          }
+        };
+      };
+
+      return {
+        // Get the Singleton instance if one exists
+        // or create one if it doesn't
+        getInstance: function () {
+
+          if ( !instance ) {
+            instance = init();
+          }
+
+          return instance;
+        }
+
+      };
+
+    })();
+
+4.  Observer/Pub-sub/Event Emitter Design Pattern?
+    - Ther Observer is a design pattern in which and object (also know as subject) maintains list of objects
+      depending on it(observers), automatically notifying them of any changes to state.
+    - When a subject needs to notify observers about something interesting happening, it broadcasts a
+      notification to the observers (which can include specific data related to the topic of the notification)
+
+3.  What is Factory Design Pattern?
+    - With the factory pattern we can use factory functions in order to create new objects. 
+      A function is a factory function when it returns a new object without the use of the new keyword!
+
+      The factory pattern can be useful if we're creating relatively complex and configurable objects.
+      It could happen that the values of the keys and values are dependent on a certain environment or 
+      configuration. With the factory pattern, we can easily create new objects that contain the custom keys
+      and values!
+
+      Eg:
+      const createUser = ({ firstName, lastName, email }) => ({
+        firstName,
+        lastName,
+        email,
+        fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        }
+      });
+
+      const user1 = createUser({
+        firstName: "John",
+        lastName: "Doe",
+        email: "john@doe.com"
+      });
+
+      const user2 = createUser({
+        firstName: "Jane",
+        lastName: "Doe",
+        email: "jane@doe.com"
+      });
