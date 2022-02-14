@@ -328,6 +328,7 @@ JS ARCHITECTURE
 - What is Denal of service.
 - how to avoid nested for loop
 - How do you handle security of web applicaton.
+- Minimium time required to load the web page?
 - How will you increase the performance of web application.
   https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
   1.  Make use of CDN links to load the external resources.
@@ -379,11 +380,13 @@ JS ARCHITECTURE
   number of quirks implemented.
 
 - What kind of things must you be wary of when the design or developing for multilingual sites?
+
 ----------
 MANAGEMENT
 ----------
 
 - How will you divide your work
+- How will handle a situation where given time is not sufficient to deliver the project?
 
 ES6 features:
  - templating
