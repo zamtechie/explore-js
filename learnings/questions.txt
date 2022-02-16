@@ -103,7 +103,7 @@ JS: ADVANCED
                     height = (height !== undefined && height !== null) ? height : 100;
 
     - Polyfills:  A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers
-      that do not natively support it. .
+                  that do not natively support it. .
                   eg:
                   if (!Math.trunc) { // if no such function
                     // implement it
