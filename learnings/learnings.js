@@ -324,4 +324,14 @@ export function learningFn() {
     console.log('In event Loop function');
   };
   // eventLoopFn();
+
+  /************************/
+  /*** ES6 Destructuring ***/
+  /************************/
+  let es6Destructuring = () => {
+    let [x, y, z] = [1, 2, 3];
+    console.log(x, y, z);
+  };
+
+  // es6Destructuring();
 }
