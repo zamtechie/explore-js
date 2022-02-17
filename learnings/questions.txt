@@ -388,8 +388,12 @@ MANAGEMENT
 - How will handle a situation where given time is not sufficient to deliver the project?
 
 ES6 features:
- - templating
- - destructure
+ -  templating
+    - Template literals are enclosed by the backtick (` `) (grave accent) character instead of double or single quotes.
+
+ -  destructure
+    - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties
+      from objects, into distinct variables.
 
 -------
 ANGULAR
