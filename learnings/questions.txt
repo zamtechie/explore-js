@@ -296,11 +296,12 @@ JS: ADVANCED
       If one of the promise is failed then the combine promise will fail.
 
 21. What is higher order functions?
-22. promise async await
-23. How to know which component called the method? console.trace()
-24. How to ensure you are getting the latest store in redux?
+    - A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
 
-25. What is 'prototype' object? Or Why JS language is also known as prototyping language?
+22. How to know which component called the method? 
+    - console.trace()
+
+23. What is 'prototype' object? Or Why JS language is also known as prototyping language?
     - The prototype object is special type of enumerable object to which additional properties can be attached to it which will
       be shared across all the instances of it's constructor function.
       Eg: 
