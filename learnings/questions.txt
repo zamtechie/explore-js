@@ -935,3 +935,31 @@ Daily tasks I do related to project?
 - Distribute the work within the team and guide the team member if they have any queries.
 - Code owner of this project so need to review all PR raised by the team member
 - Plan the release for each PSI (Potential Shippable Increment)
+
+-----------------
+I1
+
+HTML:
+
+What is DocType, what will hapeen if wont give doctype
+Difference between html elements and html tags
+&lt; &gt; &nbsp;
+Accessibility
+HTML symantic elements
+
+
+CSS
+box-sizing
+how to center the div in page
+cell-spacing and cell-padding
+inline, block, inline-block
+
+Angular
+Fundamentals of Angular
+Directives in Angular
+why there is false in ViewChild
+how to you will upgrade from Angular4 to Angular13
+Difference between the Angular and AngularJS
+Different types of Pipes
+what and pure and impore pipes
+Difference between the Behaviour Subject and Replay Subject
