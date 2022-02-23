@@ -386,44 +386,82 @@ JS ARCHITECTURE
         – An attack that could result in an unsolicited transfer of funds, changed passwords or data theft.
           It’s caused when a malicious web application makes a user’s browser perform an unwanted action in a site to which a user is logged on.
     
-- Minimium time required to load the web page?
-  - Minimium time in which web-site should load is 4seconds
-  - The average load time for mobile sites is 19 seconds over 3G connections. 
-    Models predict that publishers whose mobile sites load in 5 seconds earn up to 2x more mobile ad revenue than those whose
-    sites load in 19 seconds.
+5.  Minimium time required to load the web page?
+    - Minimium time in which web-site should load is 4seconds
+    - The average load time for mobile sites is 19 seconds over 3G connections. 
+      Models predict that publishers whose mobile sites load in 5 seconds earn up to 2x more mobile ad revenue than those whose
+      sites load in 19 seconds.
 
-- How will you increase the performance of web application.
-  https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
-  1.  Make use of CDN links to load the external resources.
-  2.  Move your website to a better host:
-      There are three possible types of hosting:
-        - Shared hosting - cheap and slow
-        - Virtual Private Servers (VPS) hosting - expensive and faster
-        - Dedicated server - very expensive and very fast.
-  3.  Optimize the size of images on your website:
-      The best way to reduce the image size without compromising its quality is to compress images using such tools as 
-      'ImageOptim', 'JPEGmini', or 'Kraken'. 
-      Use of sprite image for icon so it will be loaded only one time.
-  4.  Use website caching:
-  5.  Implement Gzip Compression:
-      Gzip Compression is an effective way to reduce the size of files. It minimizes the HTTP requests and reduces the server
-      response time. Gzip compresses the files before sending them to the browser. On the user side, a browser unzips the
-      files and presents the contents. This method can work with all files on your website. You can enable Gzip on your
-      website by adding some lines of the code or via a utility called gzip.
-  6.  Reduce the use of web fonts:
-      Web fonts have become very popular in website design. Unfortunately, the use of web fonts has a negative impact on the
-      speed of page rendering. Web fonts add extra HTTP requests to external resources. The following measures will help you
-      reduce the size of web font traffic.
-      Use modern formats WOFF2 for modern browsers;
-      Include only those character sets that are used on the site;
-      Choose only the needed styles
+6.  How will you increase the performance of web application.
+    https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
+    1.  Make use of CDN links to load the external resources.
+    2.  Move your website to a better host:
+        There are three possible types of hosting:
+          - Shared hosting - cheap and slow
+          - Virtual Private Servers (VPS) hosting - expensive and faster
+          - Dedicated server - very expensive and very fast.
+    3.  Optimize the size of images on your website:
+        The best way to reduce the image size without compromising its quality is to compress images using such tools as 
+        'ImageOptim', 'JPEGmini', or 'Kraken'. 
+        Use of sprite image for icon so it will be loaded only one time.
+    4.  Use website caching:
+    5.  Implement Gzip Compression:
+        Gzip Compression is an effective way to reduce the size of files. It minimizes the HTTP requests and reduces the server
+        response time. Gzip compresses the files before sending them to the browser. On the user side, a browser unzips the
+        files and presents the contents. This method can work with all files on your website. You can enable Gzip on your
+        website by adding some lines of the code or via a utility called gzip.
+    6.  Reduce the use of web fonts:
+        Web fonts have become very popular in website design. Unfortunately, the use of web fonts has a negative impact on the
+        speed of page rendering. Web fonts add extra HTTP requests to external resources. The following measures will help you
+        reduce the size of web font traffic.
+        Use modern formats WOFF2 for modern browsers;
+        Include only those character sets that are used on the site;
+        Choose only the needed styles
+
+7.  How to prevent cross site scripting? or What is HTML Sanitizer API?
+    - Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating
+      solution or for rendering user generated content, or when including data in a frame from other another site. The Sanitizer API
+      allows for rendering of this potentially untrusted HTML in a safe manner.
+
+8.  How to logout from all tabs?
+    - Step-1: Create JavaScript localStorage and save a token. localStorage saves a token as key value pair. 
+              It has no expiry time. It will available when we open new tab, too.
+
+              Set Item code: localStorage.setItem("token_name", "username");
+
+              Get Item code: var username= localStorage.getItem("token_name");
+
+    - Step-2: Once you logout, remove the value from localStorage.
+              localStorage.removeItem("token_name");
+
+    - Step-3: Use storage event. It will be fired automatically in all tabs when localStorage will be modified.
+
+              @Component({
+                  ------ 
+              })
+              export class AppComponent implements OnInit{
+
+                ngOnInit() {
+
+                    window.addEventListener('storage', (event) => {
+                        if (event.storageArea == localStorage) {
+                            let token = localStorage.getItem('token_name');
+                            if(token == undefined) { 
+                              // Perform logout
+                              //Navigate to login/home
+                                this.router.navigate(['/login']); 
+                            }
+                        }
+                    });
+
+                }
+
+              }
 
 - How to check Performance of web application from google chrome
 - How browser will know the new version file#code.js
 - Microfront ends, webpack fedration
 - How will you decide which web technology to use?
-- How cross site scripting attack example - sanitize html
-- How to logout from all tabs
 - Why micro-service are stateless?
 - How to manage flash sale?
 - How you decide which component develop?
