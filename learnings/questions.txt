@@ -1,4 +1,67 @@
 ----------
+HTML
+----------
+1.  What is DocType, what will hapeen if wont give doctype?
+    - In HTML documents, browsers use a DOCTYPE in the beginning of the document to decide whether to handle
+      it in quirks mode or standards mode.
+
+      <!DOCTYPE html> // Tells the browser that we are using HTML5.
+
+    - If document type is not mentioned, browser will go to Quirks mode. 
+      Quirks mode depends upon the web browser version, 
+      If is older version then this will not support HTML5 tags (Example: header tag, footer tag, section tag,...)
+
+2.  Difference between html elements and html tags?
+    - HTML Tags: 
+      Tags are the starting and ending parts of an HTML element.
+      They begin with < symbol and end with > symbol. Whatever written inside < and > are called tags.
+
+    - HTML elements: 
+      Elements enclose the contents in between the tags. They consist of some kind of structure or expression.
+      It generally consists of a start tag, content and an end tag.
+
+    - HTML Attributes:
+      It is used to define the character of an HTML element. It always placed in the opening tag of an element.
+      It generally provides additional styling (attribute) to the element.
+
+3.  What are HTML entities?
+    - Some characters are reserved in HTML.
+      If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags.
+
+      eg: &nbsp; &amp; &quot; &apos; etc
+
+4.  What is Accessibility?
+    - Accessibility for the web means making sure that our web pages and applications are available to everyone,
+      including people with disabilities. 
+      Many but not all users with disabilities use assistive devices or software to browse the web.
+      This includes on mobile devices as well as regular desktop computers.
+
+      Using HTML5 symantic elements with the attribute as roll
+
+      <header>	role=”banner”
+      <nav>	    role=”navigation”
+      <footer>	role=”contentinfo”
+      <aside>	  role=”complementary”
+      <article> no equivilent
+
+5.  HTML symantic elements?
+    - In HTML there are some semantic elements that can be used to define different parts of a web page:  
+
+      <article>
+      <aside>
+      <details>
+      <figcaption>
+      <figure>
+      <footer>
+      <header>
+      <main>
+      <mark>
+      <nav>
+      <section>
+      <summary>
+      <time>
+
+----------
 JS: BASICS
 ----------
 
@@ -486,8 +549,29 @@ JS ARCHITECTURE
 MANAGEMENT
 ----------
 
-- How will you divide your work
-- How will handle a situation where given time is not sufficient to deliver the project?
+1.  How will you divide your work
+
+    - Make a Plan of Action
+      A well-defined plan is the cornerstone of a successful project. Make a detailed plan, divide it into different parts,
+      and note down what has to be done to achieve the objectives mentioned in the plan.
+
+    - Assign Roles
+      Now that you know the team's capability and qualities, assign roles and designations to the members.
+
+    - Set Small Goals:
+      A big goal can be achieved by breaking it into small targets. Make the task fun and fulfilling by setting up 
+      small milestones. Be strict with deadlines! 
+
+    - Communicate:
+      A healthy environment is important for any team to work efficiently. It is necessary to fill all sorts of communication
+      gaps to realize this environment. People should be at ease. Take everyone’s opinions and have a meeting with all the 
+      team members at the end of the task. 
+
+2.  How will handle a situation where given time is not sufficient to deliver the project?
+    - Find we need to find the where we went wrong using 5 why technique
+    - Negotiate:
+      Instead of delivering complete feature, can we divide modules which are must to have and nice to have.
+      Can we diliver must-to-have modules and can take nice-to-have as a second increment.
 
 ES6 features:
  -  templating
