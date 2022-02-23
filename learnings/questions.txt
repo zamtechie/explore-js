@@ -323,10 +323,24 @@ JS: ADVANCED
 JS ARCHITECTURE
 ---------------
 
-- What is lazy loading?
-- What is Denal of service.
-- how to avoid nested for loop
-- How do you handle security of web applicaton.
+1.   What is lazy loading?
+    - Lazy loading (also called on-demand loading) is an optimization technique for the online content, be it a website or a web app.
+      Instead of loading the entire web page and rendering it to the user in one go as in bulk loading, the concept of lazy loading
+      assists in loading only the required section and delays the remaining, until it is needed by the user.
+
+    - One form of lazy loading is infinity scroll, in which, the content of the web page is loaded as and when the user scrolls down
+      the page. It is a popular technique being used by various websites.
+
+2.  What is Denal of service attack?
+    - A Denial-of-Service (DoS) attack is an attack meant to shut down a machine or network, making it inaccessible to its intended users.
+      DoS attacks accomplish this by flooding the target with traffic, or sending it information that triggers a crash.
+      In both instances, the DoS attack deprives legitimate users (i.e. employees, members, or account holders) of the service or 
+      resource they expected.
+
+3.  How to avoid nested for loop
+
+4.  How do you handle security of web applicaton?
+
 - Minimium time required to load the web page?
 - How will you increase the performance of web application.
   https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
