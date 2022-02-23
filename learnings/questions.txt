@@ -341,7 +341,57 @@ JS ARCHITECTURE
 
 4.  How do you handle security of web applicaton?
 
+    - Input field Validation:
+      A good rule of thumb is to consider all input to be hostile until proven otherwise.
+      Input validation is done so that only properly-formed data passes through the workflow in a web application.
+      This prevents bad or possibly corrupted data from being processed and possibly triggering the malfunction of downstream components.
+
+    - Encrypt your data:
+      Encryption is the basic process of encoding information to protect it from anyone who is not authorized to access it. 
+      Encryption itself does not prevent interference in transmit of the data but obfuscates the intelligible content to those who are
+      not authorized to access it.
+
+    - Apply Authentication, Role Management & Access Control:
+      When designing a web application, one very basic goal should be to give each and every user as little privileges as possible
+      for them to get what they need from the system. Using this principle of minimal privilege, you will vastly reduce the chance of 
+      an intruder performing operations that could crash the application or even the entire platform in some cases (thus adversely 
+      affecting other applications running on that same platform or system).
+
+      Other considerations for authentication and access control include things such as password expiration, 
+      account lock-outs where applicable, and of course SSL to prevent passwords and other account-related information being sent in plain view.
+
+    - Implement HTTPS (and Redirect All HTTP Traffic to HTTPS):
+      Encryption at the service level is also extremely helpful (and sometimes necessary) preventative measure that can be taken to 
+      safeguard information. This is typically done by using HTTPS (SSL or Secure Sockets Layer).
+
+      SSL is a technology used to establish an encrypted link between a web server and a browser. This ensures that the information 
+      passed between the browser and the webserver remains private. SSL is used by millions of websites and is the industry standard 
+      for protecting online transactions.
+
+    - Scan your website for vulnerabilities often:
+      Periodically web application needs to scanned and check if there are any vulnerabilities
+
+    - Proper web application security testing which should find the different vulnerabilities from the web application:
+      - SQL Injection 
+        – Occurs when a perpetrator uses malicious SQL code to manipulate a backend database so it reveals information.
+        - Consequences include the unauthorized viewing of lists, deletion of tables and unauthorized administrative access.
+      - Cross-site Scripting (XSS) 
+        – XSS is an injection attack targeting users in order to access accounts, activate Trojans or modify page content.
+          Stored XSS occurs when malicious code is injected directly into an application. Reflected XSStakes place when malicious 
+          script is reflected off of an application onto a user’s browser.
+      - Remote File Inclusion 
+        – A hacker uses this type of attack to remotely inject a file onto a web application server. This can result in the execution 
+          of malicious scripts or code within the application, as well as data theft or manipulation.
+      - Cross-site Request Forgery (CSRF) 
+        – An attack that could result in an unsolicited transfer of funds, changed passwords or data theft.
+          It’s caused when a malicious web application makes a user’s browser perform an unwanted action in a site to which a user is logged on.
+    
 - Minimium time required to load the web page?
+  - Minimium time in which web-site should load is 4seconds
+  - The average load time for mobile sites is 19 seconds over 3G connections. 
+    Models predict that publishers whose mobile sites load in 5 seconds earn up to 2x more mobile ad revenue than those whose
+    sites load in 19 seconds.
+
 - How will you increase the performance of web application.
   https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
   1.  Make use of CDN links to load the external resources.
