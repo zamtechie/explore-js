@@ -20,3 +20,4 @@ JS: Programs
 15. Find the GCM of 4, 8?
 16. Find the LCM of 4, 8?
 17. 3 Kids and 5 Toyes which kid will get the last toy?
+18. Get the prime number from 1 to 100
