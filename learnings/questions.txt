@@ -1022,8 +1022,20 @@ ANGULAR
 13. Promises vs timeout promisis has preccedence than any other function
 14. Declaretive vs Imperative React/angular is declaretive and js is imperative
 23. web pack
-- canativate
-- authguard
+
+- CanActivate:
+  - CanActivate is the Interface that a class can implement to be a guard deciding if a route can be activated. 
+    If all guards return true, navigation continues. If any guard returns false, navigation is cancelled. 
+
+- AuthGuard:
+  - AuthGuard is used to protect the routes from unauthorized access in angular.
+
+  - How AuthGuard Works?
+    - Auth guard provide lifecycle event called canActivate. The canActivate is like a constructor. 
+      It will be called before accessing the routes. The canActivate has to return true to access the page.
+      If it returns false, we can not access the page.
+      We can write our user authorization and authentication logic inside the canActivate function.
+
 - loadchildren
 - router
 - Dom Sanitizer in angular
@@ -1149,7 +1161,16 @@ Directives in Angular
 why there is false in ViewChild
 how to you will upgrade from Angular4 to Angular13
 Difference between the Angular and AngularJS
+
 Different types of Pipes
-what and pure and impore pipes
+- What and pure and impure pipes
+  - A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe.
+  - An impure pipe is called for every change detection cycle no matter whether the value or parameter(s) changes.
+    Eg: We can create the impure pipe by passing pure as false
+        @Pipe({
+          name: 'showfilter',
+          pure: false
+        })
+
 Difference between the Behaviour Subject and Replay Subject
 Have you used NgRx/store in project
