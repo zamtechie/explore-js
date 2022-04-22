@@ -362,6 +362,10 @@ JS: ADVANCED
 
 21. What is higher order functions?
     - A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
+      Eg: the map function on arrays is a higher order function. The map function takes a function as an argument.
+          const double = n => n * 2
+          [1, 2, 3, 4].map(double) // [ 2, 4, 6, 8 ]
+
 
 22. How to know which component called the method? 
     - console.trace()
