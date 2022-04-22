@@ -343,9 +343,9 @@ JS: ADVANCED
 
 19. Explain event looping in JS? https://flaviocopes.com/javascript-event-loop/#:~:text=In%20general%2C%20in%20most%20browsers,handle%20API%20calls%20for%20example.
 
-    - The event loop is a constantly running process that monitors both the callback queue and the call stack.
-    - If the call stack is not empty, the event loop waits until it is empty and places the next function from 
-      the callback queue to the call stack. If the callback queue is empty, nothing will happen.
+    - The event loop is a constantly running process that monitors both the CALL-STACK and the CALL-BACK-QUEUE.
+    - If the CALL-STACK is not empty, the event loop waits until it is empty and places the next function from 
+      the CALL-BACK-QUEUE to the CALL-STACK. If the CALL-BACK-QUEUE is empty, nothing will happen.
 
     - JS is single threaded language.
     - All function calls is maintain CALL-STACK(LIFO).
