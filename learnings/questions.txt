@@ -244,7 +244,7 @@ JS: ADVANCED
     - Decoding atob(): ASCII to Binary.
 
 8.  What are spread operator and rest parameter?
-    - Spread operator:  Spread operator allows an iterable to expand in places where 0+ arguments are expected.
+    - Spread operator:  Spread syntax is used to unpack iterables such as arrays, objects, and function calls.
                         It expands an array into elements.
     - Rest parameter: The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
  
@@ -599,8 +599,7 @@ ES6 features:
     - Template literals are enclosed by the backtick (` `) (grave accent) character instead of double or single quotes.
 
  -  destructure
-    - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties
-      from objects, into distinct variables.
+    - Destructuring is used to create varibles from array items or object properties
 
 -------
 ANGULAR
