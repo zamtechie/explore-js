@@ -388,6 +388,21 @@ JS: ADVANCED
       studObj2.age = 35;
       alert(studObj2.name+", "+studObj2.age); // 35
 
+24. Event Propagation in JavaScript?
+    - Event propagation is a mechanism that defines how events propagate or travel through the DOM tree to arrive 
+      at its target.
+
+      In modern browser event propagation proceeds in two phases: Capturing, and Bubbling phase. 
+
+      1.  Capturing Phase:
+          - In the capturing phase, events propagate from the Window down through the DOM tree to the target node.
+            Eg: addEventListener("click", showTagName, true);
+      2.  Bubbling Phase:
+          - In Bubbling phase event propagates or bubbles back up the DOM tree, from the target element up to the Window,
+            visiting all of the ancestors of the target element one by one.
+            Eg: addEventListener("click", showTagName, false);
+          - Bubbling Phase is the default event propagation.
+
 ---------------
 JS ARCHITECTURE
 ---------------
