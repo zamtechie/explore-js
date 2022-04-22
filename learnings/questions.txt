@@ -102,16 +102,18 @@ JS: BASICS
     - 'this' stores the current execution context of the javascript program
     - 'this' keywork behave deferently base on the function invocation
     - 3 types of function invocation:
-	    - Function Invocation:
-        - here 'this' refers to the Global context.
-	    - Method Invocation:
-	      - when any function is invoked form the object it is know as method invocation.
-	        Eg: personObj.printInfo()
-		      here 'this' refers to the object which used to call the method.
-	    - Constructor Invocation:
-	      - Constructor Invocation is performed when 'new' keyword is used followed by the function name
-          - here 'this' refers to the object which used to call the method.
-	        - let personObject = new Person('Zameer', 'Inamdar');
+        - Function Invocation:
+          - here 'this' refers to the Global context.
+
+        - Method Invocation:
+          - when any function is invoked form the object it is know as method invocation.
+	          Eg: personObj.printInfo()
+		        here 'this' refers to the object which used to call the method.
+
+        - Constructor Invocation:
+          - Constructor Invocation is performed when 'new' keyword is used followed by the function name
+            - here 'this' refers to the object which used to call the method.
+	          - let personObject = new Person('Zameer', 'Inamdar');
 	
 7.  What is settimeout, cleartimeout, setinterval and clearintervals methods in JS  OR what are webAPI methods 
     provided by browser?
