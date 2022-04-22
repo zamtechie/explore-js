@@ -121,7 +121,7 @@ JS: BASICS
       how  much time(in ms) it should be executed.
       Then number ID value is retured by setTimeOut function which needs to be passed into clearTimeout() to clear
       the timer.
-    - setInterval and clearInterval: setTimeut method repeats a given function at every given time-interval.
+    - setInterval and clearInterval: setInterval method repeats a given function at every given time-interval.
       The number id value returned by setInterval() function is stored in a variable and it’s passed into the clearInterval()
       function to clear the interval.
 
