@@ -639,6 +639,12 @@ ANGULAR
     - Package.json file contains the references of all the JS packages we are using in the project.
       npm install will install all the packages in one go.
 
+6.  Explain the angular.json file?
+    - Every angular project has an “angular.json” file. We all understand that this file is very important.
+      This file contains the settings of the Angular project.
+
+      ref: https://medium.com/nerd-for-tech/what-is-inside-of-angular-json-file-636e81e67651
+
 7.  What is TypeScript and why do we need it?
     - TypeScript is the superset of Javascript and it adds types to the JavaScript.
       Eg: let x:number = 1;
