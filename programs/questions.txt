@@ -10,7 +10,7 @@ JS: Programs
 6.  Summation of Array
 7.  Multiply each element of Array with number
 8.  Subset of array [1,2,3,1,3,4,5,6,7] from 3 to 7 position
-9.  Remove the duplicate values form the array [1,2,3,1,3,4,5,6,7]
+9.  Remove the duplicate values form the array [1,4,4,5,6,7,7,7,9,8,10,10]
 10. Curring Functions eg: sum()()()()()?
 11. Converting number to binary?
 12. Polyfills for map, filter, reduce function
@@ -21,3 +21,5 @@ JS: Programs
 16. Find the LCM of 4, 8?
 17. 3 Kids and 5 Toyes which kid will get the last toy?
 18. Get the prime number from 1 to 100
+19. Input: [{'a':'a'}, {'b':'b'}, {'c':'c'}] Output: {'a':'a', 'b':'b', 'c':'c'}
+20. Input = [["1"],["2"],["3"]] Output= [1,2,3]
