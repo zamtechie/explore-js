@@ -748,7 +748,7 @@ ANGULAR
       3.  Modules:    Groups the components logically.
       4.  Bindings:   Defines how View and Component communicate.
       5.  Directives: Changes the DOM behaviour.
-      6.  Services:   Helps to share common login across the project.
+      6.  Services:   Helps to share common logic across the project.
       7.  DI:         Dependency injection helps to inject instance across constructor.
 
 17. What is a SPA?
