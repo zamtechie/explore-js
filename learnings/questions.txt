@@ -1046,22 +1046,6 @@ ANGULAR
     - Operator is nothing but a small piece of logic that will change one observable stream to another observable stream
       using Pipe.
 
-52. What are Subjects?
-    - A subject in RxJS is a special hybrid that can act as both an observable and an observer at the same time.
-      This way, data can be pushed into a subject, and the subject’s subscribers will, in turn, receive that pushed data.
-    - Subjects are useful for multicasting or for when a source of data is not easily transformed into an observable.
-
-53. Difference between the Behaviour Subject and Replay Subject
-    - BehaviorSubject
-      BehaviorSubject requires an initial value and stores the current value and emits it to the new subscribers
-
-    - ReplaySubject
-      ReplaySubject replays old values to new subscribers when they first subscribe.
-
-    - AsyncSubject
-      AsyncSubject only emits the latest value only when it completes. If it errors out then it will emit an error, 
-      but will not emit any values.
-
 54. How to install RxJS?
     - npm install rxjs
 
@@ -1087,6 +1071,22 @@ ANGULAR
       to pull stream of Data. Eg: Polling API.
     - Reactive programming is where we register a callback and the stream is resposible to push data.
     - Some developers also consider it as publisher and subsciber model as well.
+
+52. What are Subjects?
+    - A subject in RxJS is a special hybrid that can act as both an observable and an observer at the same time.
+      This way, data can be pushed into a subject, and the subject’s subscribers will, in turn, receive that pushed data.
+    - Subjects are useful for multicasting or for when a source of data is not easily transformed into an observable.
+
+53. Difference between the Behaviour Subject and Replay Subject
+    - BehaviorSubject
+      BehaviorSubject requires an initial value and stores the current value and emits it to the new subscribers
+
+    - ReplaySubject
+      ReplaySubject replays old values to new subscribers when they first subscribe.
+
+    - AsyncSubject
+      AsyncSubject only emits the latest value only when it completes. If it errors out then it will emit an error, 
+      but will not emit any values.
 
 59. What are interceptor in Angular?
     - Interceptor helps us to execute pre-processing logic before any HTTP call is made from Angular applicaiton.
