@@ -403,6 +403,16 @@ JS: ADVANCED
             Eg: addEventListener("click", showTagName, false);
           - Bubbling Phase is the default event propagation.
 
+25. What is PWA and how it works?
+    - In simple words, a PWA is a website with all the benefits of an app. PWAs give you a faster, more reliable, 
+      and more engaging version of your website or eCommerce store. PWAs can do most things that native apps can do, 
+      such as operate offline, access your camera and microphone if necessary, GPS, and more.
+
+      Main functionalities that must be present in PWA are :
+      - Available Offline
+      - Adding to Home Screen
+      - Send Push Notifications
+
 ---------------
 JS ARCHITECTURE
 ---------------
