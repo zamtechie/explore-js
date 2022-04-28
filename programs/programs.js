@@ -79,16 +79,16 @@ export function programsFn() {
     if (num < 0) {
       return 'Invalid number';
     } else if (num === 0) {
-      return 1;
+      factorialNumber = 1;
     } else {
       while (number > 0) {
         factorialNumber *= number--;
       }
     }
-    return factorialNumber;
     // console.log('factorial of:', num, ' is:', factorialNumber);
+    return factorialNumber;
   }
-  factorial(5);
+  factorial(-1);
 
   /************************************/
   /* Fibonacci number at nth position */
