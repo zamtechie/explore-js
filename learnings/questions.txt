@@ -1127,6 +1127,12 @@ ANGULAR
         { provide: HTTP_INTERCEPTORS, useClass: <classname2>, multi: true }
       ]
 
+Combine multiple API call in Angular
+What are Normal forms and Reactive Forms?
+
+Programs?
+let input  = [{'a':'a'}, {'b':'b'}, {'c':'c','d':'d'}]
+let output= {'a':'a', 'b':'b', 'c':'c','d':'d'}
 
 13. Promises vs timeout promisis has preccedence than any other function
 14. Declaretive vs Imperative React/angular is declaretive and js is imperative
