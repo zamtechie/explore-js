@@ -153,6 +153,7 @@ JS: ADVANCED
     - In JS, Hoisting is the default behaviour of moving all the declaration at the top of the scope before execution.
       Basically, it gives us an advantage that no matter where functions and variables are declared, they are moved to 
       the top of their scope regardless of whether their scope is global or local.
+      Hoisting allows functions to be safely used in code before they are declared.
 
 2.  What are Transpilers and Polyfills?
     - Transpilers:  It is library which translate the source code to another source code.
