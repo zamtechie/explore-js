@@ -69,7 +69,7 @@ JS: BASICS
     - All var, let and const are used to declare the variable in JS
     - Variable defined using var has a function scope.
     - Variable defined using let and const has a blocked scope.
-    - Variable defined using const cannot be modified.
+    - Variable defined using const cannot be reassign.
 
 2.  What are JS engine?
     - JS engine are used to convert the high level code that JS code into machine-readable code(ByteCode)
