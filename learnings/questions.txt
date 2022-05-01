@@ -591,6 +591,11 @@ JS ARCHITECTURE
 - How you decide which component develop?
 - Thousand records 
 
+------------
+JS IMP Links
+------------
+- https://alitoshmatov.medium.com/interview-questions-for-javascript-developer-epam-s-bdb995c0fa20
+ 
 ----------
 MANAGEMENT
 ----------
