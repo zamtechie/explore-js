@@ -556,6 +556,15 @@ JS ARCHITECTURE
                 }
 
               }
+9.  What is Single Sign On and How to implement it in Angular?
+    - SSO implementation revolves around a central server. All applications trust this main server and use it
+      to access your login credentials. When you first log in, the server creates a cookie with your details.
+      When you access a new application, you get redirected to this central server. The cookie there then
+      redirects you straight to the app. Any login prompts will not be necessary now that the server
+      contains your credentials.
+
+  - To implementation SSO in Angular we need angular-oauth2-oidc package.
+    ref: https://www.youtube.com/watch?v=AcuzemsJfxA
 
 - How to check Performance of web application from google chrome
 - How browser will know the new version file#code.js
