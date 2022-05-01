@@ -566,6 +566,22 @@ JS ARCHITECTURE
   - To implementation SSO in Angular we need angular-oauth2-oidc package.
     ref: https://www.youtube.com/watch?v=AcuzemsJfxA
 
+10. What is the difference between linking to an image, a website, and an email address?
+    - The HTML img tag is used to link an image to a website.
+      The HTML anchor tag is used to link a website by adding the path of the website in the hypertext 
+      reference (href) attribute.
+      To link an email address, we specify mailto at the beginning of the email address and pass this path in 
+      the href attribute of the anchor tag.
+
+11. What’s the difference between standards mode and quirks mode?
+    - There are now three modes used by the layout engines in web browsers: quirks mode, almost standards mode,
+      and full standards mode. In quirks mode, layout emulates nonstandard behavior in Navigator 4 and 
+      Internet Explorer 5. This is essential in order to support websites that were built before the widespread
+      adoption of web standards. In full standards mode, the behavior is (hopefully) the behavior described 
+      by the HTML and CSS specifications. In almost standards mode, there are only a very small 
+      number of quirks implemented.
+
+- What kind of things must you be wary of when the design or developing for multilingual sites?
 - How to check Performance of web application from google chrome
 - How browser will know the new version file#code.js
 - Microfront ends, webpack fedration
@@ -574,21 +590,6 @@ JS ARCHITECTURE
 - How to manage flash sale?
 - How you decide which component develop?
 - Thousand records 
-
-- What is the difference between linking to an image, a website, and an email address?
-  The HTML img tag is used to link an image to a website.
-  The HTML anchor tag is used to link a website by adding the path of the website in the hypertext reference (href) attribute.
-  To link an email address, we specify mailto at the beginning of the email address and pass this path in the href attribute of
-  the anchor tag.
-
-- What’s the difference between standards mode and quirks mode?
-  There are now three modes used by the layout engines in web browsers: quirks mode, almost standards mode, and full standards
-  mode. In quirks mode, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5. This is essential in order
-  to support websites that were built before the widespread adoption of web standards. In full standards mode, the behavior is
-  (hopefully) the behavior described by the HTML and CSS specifications. In almost standards mode, there are only a very small
-  number of quirks implemented.
-
-- What kind of things must you be wary of when the design or developing for multilingual sites?
 
 ----------
 MANAGEMENT
