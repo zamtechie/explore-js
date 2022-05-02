@@ -1143,6 +1143,16 @@ ANGULAR
         { provide: HTTP_INTERCEPTORS, useClass: <classname2>, multi: true }
       ]
 
+63. What are Template driven form and Reactive forms in Angular?
+    - Template Driven Form	                   | Reactive Forms
+      --------------------------------------------------------------------------------------------
+      Template-driven forms make use of the    | Reactive forms are based on "ReactiveFormsModule"
+      "FormsModule"	                           |
+      Template-driven forms are asynchronous   | Reactive forms are mostly synchronous.
+      in nature                                |
+      In a template-driven approach, most of   | In reactive-driven approach, the logic 
+      the logic is driven from the template	   | resides mainly in the component or typescript code
+
 Combine multiple API call in Angular
 What are Normal forms and Reactive Forms?
 
