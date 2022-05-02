@@ -1328,4 +1328,16 @@ Change detection
 Lifecycle hooks
 
 
+Design of Complete Angular Application
+CanDeactivate how it works?
+Disadvantange of SPA?
+SSO Implementation?
+How to integrate the one component develop in react in Angular app?
+How to implement SEO?
+Usecase of Behaviour Subject?
+Usecase of using Impure Pipes
+Angular upcoming module for SEO
+Lear SCSS ref: https://www.youtube.com/watch?v=Zz6eOVaaelI?
+
+
 
