@@ -287,7 +287,7 @@ function arrToObj() {
 
   console.log('output1:', output1);
 }
-//arrToObj();
+arrToObj();
 /******************************************************/
 /*  Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1}  */
 /*  Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] */
@@ -308,4 +308,4 @@ function arrangeElements() {
   console.log('outputArr:', outputArr);
 }
 
-arrangeElements();
+// arrangeElements();
