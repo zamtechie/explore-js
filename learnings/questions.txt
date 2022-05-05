@@ -1235,8 +1235,15 @@ ANGULAR
       In a template-driven approach, most of   | In reactive-driven approach, the logic 
       the logic is driven from the template	   | resides mainly in the component or typescript code
 
-Combine multiple API call in Angular
-What are Normal forms and Reactive Forms?
+66. Which file is entry point of Angular application?
+    The angular.module is the entry point of Angular applications.
+    Each application has just one module that gets the rootElement or tag.
+
+67. Combine multiple API call in Angular
+    - We can combine multiple api using 'mergeMap' and 'forkJoin'.
+    - When multiple API's are interdependent the we can use 'mergeMap'.
+    - When multiple API's are not interdependent and we want to group the multiple API calls then we can use 'forkJoin'.
+
 
 Programs?
 let input  = [{'a':'a'}, {'b':'b'}, {'c':'c','d':'d'}]
