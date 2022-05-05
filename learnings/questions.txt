@@ -585,12 +585,6 @@ JS ARCHITECTURE
       by the HTML and CSS specifications. In almost standards mode, there are only a very small 
       number of quirks implemented.
 
-12. What is CanDeactivate Guard?
-    - The Angular CanDeactivate guard is called, whenever we navigate away from the route before the current 
-      component gets deactivated.
-    - The best use case for CanDectivate guard is the data entry component. The user may have filled the data entry
-      and tries to leave that component without saving his work. The CanDeactivate guard gives us a chance to warn 
-      the user that he has not saved his work and give him a chance to cancel the navigation.
 
 13. Disadvantange of SPA?
     - A Problem In Storing Browser History:
@@ -877,24 +871,46 @@ ANGULAR
     - If we need to navigate via script then we need to call this.router.navigate()
       Eg: this.router.navigate(['/Home'])
 
-20. What is lazy loading in Angular?
+20  CanActivate:
+    - CanActivate is the Interface that a class can implement to be a guard deciding if a route can be activated. 
+      If all guards return true, navigation continues. If any guard returns false, navigation is cancelled. 
+
+21. AuthGuard:
+    - AuthGuard is used to protect the routes from unauthorized access in angular.
+
+    - How AuthGuard Works?
+      - Auth guard provide lifecycle event called canActivate. The canActivate is like a constructor. 
+        It will be called before accessing the routes. The canActivate has to return true to access the page.
+        If it returns false, we can not access the page.
+        We can write our user authorization and authentication logic inside the canActivate function.
+
+22. What is CanDeactivate Guard?
+    - The Angular CanDeactivate guard is called, whenever we navigate away from the route before the current 
+      component gets deactivated.
+    - The best use case for CanDectivate guard is the data entry component. The user may have filled the data entry
+      and tries to leave that component without saving his work. The CanDeactivate guard gives us a chance to warn 
+      the user that he has not saved his work and give him a chance to cancel the navigation.
+
+
+
+23. What is lazy loading in Angular?
     - Lazy loading means on demand loading. Loading only necessary HTML, CSS and Javascript files so that you have
       better performance.
 
-21. How to implement Lazy Loading in Angular?
+24. How to implement Lazy Loading in Angular?
     - To implement Lazy loading in Angular you need to do two things.
       - First divide your project into separate separate modules.
       - And then the module you want to do Lazy loading use 'loadChildren' in your route collection.
 
-22. What are services in Angular?
+25. What are services in Angular?
     - Services helps us to share common logic across Angular project.
       Eg: Logger, Validations, HTTP services.
 
-23. What is Dependency Injection?
+26. What is Dependency Injection?
     - Dependency Injection is an application design pattern where rather than creating object instances from within
       the component, Angular injects it via the constructor.
 
-24. How to implement the Dependency Injection?
+27. How to implement the Dependency Injection?
     - To do Dependency Injection in Angualar we need to use the 'providers' property which is available in @NgModule decorator.
       And then you can go to your component in construtor we say give service
       Eg: 
@@ -908,20 +924,20 @@ ANGULAR
       In component file:
       constructor(public l: BaseLogger)
 
-25. What is the benefit of Dependency Injection?
+28. What is the benefit of Dependency Injection?
     - Dependency Injection helps to decouple class dependencies, so that when you add new dependencies you do not have to do
       changes everywhere in project.
 
-26. What is the difference between 'ng serve' and 'ng build'?
+29. What is the difference between 'ng serve' and 'ng build'?
     - 'ng serve' builds inmemory while 'ng build' builds on the hard disk, so actually it goes and creates dist folder and put all
       compiled code in this folder.
       So when you want to go for production build 'ng build' command is used.
 
-27. Explain the --prod parameter in 'ng build'?
+30. Explain the --prod parameter in 'ng build'?
     - '--prod' compresses your JS file, remove comments, creates GUIDs of your JS files and make your application ready for
       production.
 
-28. Explain ViewChild and ViewChildren?
+31. Explain ViewChild and ViewChildren?
     - ViewChild and ViewChidren helps us to refer the HTML elements of the View.
     - ViewChild is use to refering only single element and ViewChildren is to refer the collection.
 
@@ -938,11 +954,11 @@ ANGULAR
       @ViewChild(comp2, { static: false }) tref ....
       @ViewChildren(comp2) myComponent: QueryList<comp2>
 
-29. Why do we need template reference variables?
+32. Why do we need template reference variables?
     - A template reference variable is used to give reference to the DOM Element, a component, directive, or a web component within
       a template
 
-30. What is ContentProjection?
+33. What is ContentProjection?
     - Content Projection is scenario where we need project html content from Parent Component to Child Component
     - Content from parent component will be shown inside of <ng-content> tag of child component.
 
@@ -952,7 +968,7 @@ ANGULAR
     Component 2:
     <ng-content></ng-content>
 
-31. Explain Content Projection Slot?
+34. Explain Content Projection Slot?
     - If we have multiple ng-content tag in Child Component and we want to show specific content inside specific slot.
 
     Eg:
@@ -969,7 +985,7 @@ ANGULAR
     <ng-content select="slot1"></ng-content>
     <ng-content select="slot2"></ng-content>
 
-32. What is ContentChild and ContentChildren?
+35. What is ContentChild and ContentChildren?
     - ContentChild and ContentChildren helps us to access the projected content from the Parent Component.
     Eg:
     Component 1
@@ -986,17 +1002,17 @@ ANGULAR
     @ContentChild("projectedcontent")
     @ContentChildren("projectedcontent")
 
-33. ViewChild vs ViewChidren vs ContentChild vs ContentChildren?
+36. ViewChild vs ViewChidren vs ContentChild vs ContentChildren?
     - "ViewChild and ViewChildren" will helpful for accessing the HTML elements of its own view.
     - "ContentChild and ContentChildren" will helpful for accessing the HTML elements which are Projected by the Parent.
 
-34. Explain the importance of Component Life Cycle? What are exactly Angular Component Hooks? Explain the LifeCycle or
+37. Explain the importance of Component Life Cycle? What are exactly Angular Component Hooks? Explain the LifeCycle or
     events in Angular Components?
     - Angular component hooks are nothing but readymade events provided by Angular which developer can use it and write
       the custome code. For example if we want to write some initialization then we can use 'ngOnInit' event, if we need
       to write any cleanup code once the component is unloaded then we can use 'ngOnDestroy'
 
-35. Explain Events and Sequence of Component Life cycle?
+38. Explain Events and Sequence of Component Life cycle?
     - Complete lifecyle Angular events can be divided into two parts the first are those sequence of events which are
       fired when Component is loaded first time and second sequence of events are those events which are fired on every
       change detection.
@@ -1022,7 +1038,7 @@ ANGULAR
       - ngAfterContentChecked:
       - ngAfterViewChecked:
 
-36. Constructor VS ngOnInit()? What kind of code you will put in Constructor and in ngOnInit?
+39. Constructor VS ngOnInit()? What kind of code you will put in Constructor and in ngOnInit?
     - Constructor:  - Constructor is a TypeScript concept it is invoked by TypeScript framework.
                     - There is not way to access html DOM element since View and Component are not initialized.
                     - Initials the class member variables and can do Dependency Injection.
@@ -1030,18 +1046,18 @@ ANGULAR
                 - At this time Component is initialized and View binding is done so here we can write initializing code as well
                   as initializing of class member variables also loading of grid, enable/disabling UI etc
 
-37. How to make HTTP calls using Angular?
+40. How to make HTTP calls using Angular?
     - Import 'HttpClientModule' at the module level.
     - Import 'HttpClient' from '@angular/common/http'.
     - Create object of 'HttpClient' using 'Dependency Injection'.
     - We can make 'post' or 'get' call using 'HttpClient'.
     - Using subscribe function handle the success and error response.
 
-38. What is the need of Subscribe function? 37. How to handle errors when HTTP fails?
+41. What is the need of Subscribe function? 37. How to handle errors when HTTP fails?
     - subscribe function is use to handle success and error response from server.
     - subscribe function has first success callback function and second one is the error callback function.
 
-39. How to pass the data between components? 39. What are Input, Output and event Emitters? 40. How to pass data during routing?
+42. How to pass the data between components? 39. What are Input, Output and event Emitters? 40. How to pass data during routing?
     - Scenario 1: Parent child component scenario.
                   - To pass data from Parent component to Child component we can use 'Input' decorator.
                   - To pass data from Child component to Parent component we can use 'Output' decorator and by using 'EventEmitter' we can emit.
@@ -1051,26 +1067,26 @@ ANGULAR
                   - we can use queryparams
     - Scenario 3: Using service
 
-40. How to pass data between siblings Component
+43. How to pass data between siblings Component
     - There are two ways to share the data among the siblings.
       1. Share the data from sibling1 to parent then from parent to sibling2.
       2. Using the shared service, we can create the shared service for this component and share the data among it.
 
-41. Is it a good practice to pass data using services ?
+44. Is it a good practice to pass data using services ?
     - No, since service can be use to share the data across the components.
 
-42. What is the need of Angular Pipes?
+45. What is the need of Angular Pipes?
     - Pipes helps to transform data on Angular UI expression from one format to another format.
       Eg: <p> Hello {{'world' | uppercase }}
 
-43. Can you name some built-in Angular Pipes?
+46. Can you name some built-in Angular Pipes?
     - CurrencyPipe: {{ 1234.56 | currency:'USD' }} => $1234.56
     - DecimalPipe: {{ 3.14159265 | number: '3.1-2' } => 003.14
     - LowerCasePipe: <p> Hello {{'woRLD' | uppercase }} = Hello WORLD
     - UpperCasePipe: <p> Hello {{'woRLD' | lowercase }} = Hello world
     - DatePipe: {{ dateVal | date: 'shortTime' }} => 4:38 PM
 
-44. How to create Custom pipes in Angular?
+47. How to create Custom pipes in Angular?
     - Custome pipe can be creating by implementing the PipeTransform
 
     UI:
@@ -1090,7 +1106,7 @@ ANGULAR
       }
     }
 
-45. Different types of Pipes OR What and pure and impure pipes?
+48. Different types of Pipes OR What and pure and impure pipes?
     - A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe.
     - An impure pipe is called for every change detection cycle no matter whether the value or parameter(s) changes.
       Eg: We can create the impure pipe by passing pure as false
@@ -1099,22 +1115,22 @@ ANGULAR
             pure: false
           })
 
-46. Usecase of using Impure Pipes
+49. Usecase of using Impure Pipes
     - Impure pipe is use for filtering or sorting of data.
 
-47. What's the full form of RxJS?
+50. What's the full form of RxJS?
     - RxJS stands for Reactive extentions for JavaScript.
 
-48. What is the purpose of RxJS?
+51. What is the purpose of RxJS?
     - Main purpose of RxJS is to handle Asynchronous data stream easily.
     Note: Asynchronous data can be http response, Timer or port.
 
-49. What are Observables and Observer in RxJS?
+52. What are Observables and Observer in RxJS?
     - Observable and Observer is RxJS objects to handle Asynchronous data stream.
     - Observable represents Asynchronous data stream and Observer is nothing but a function which will subscribe the
       Observable and listen to the data stream.
 
-50. Explain the Subscribe with sample code?
+53. Explain the Subscribe with sample code?
     - Goal of Subscribe is to attach the listener to the Observable.
 
     Eg:
@@ -1139,24 +1155,24 @@ ANGULAR
       filterObservalObj.unsubsribe();
     }
 
-51. How to to unsubsribe the Observable stream in RxJS?
+54. How to to unsubsribe the Observable stream in RxJS?
     - We can unsubsribe observable using <Observable Object>.unsubsribe method.
 
-52. Explain concept of operators with Sample code?
+55. Explain concept of operators with Sample code?
     - Operator is nothing but a small piece of logic that will change one observable stream to another observable stream
       using Pipe.
 
-53. How to install RxJS?
+56. How to install RxJS?
     - npm install rxjs
 
-54. Differentiate between RxJS and Promise?
+57. Differentiate between RxJS and Promise?
     - Observable return the stream of data and Promise return a single value.
     - We can subscribe and unsubsribe stream and we cannot cancel the Promise.
 
-55. How you have used RxJS in Angular project?
+58. How you have used RxJS in Angular project?
     - RxJS is used mostly with HTTP calls since it returns stream of data/Observable.
 
-56. What kind of RxJS operator you have used uptill now:
+59. What kind of RxJS operator you have used uptill now:
     - Map:  Transform data in a Observable into a different format.
     - Filter: Filter the data based on filter criteria
     - From: This operator will turn Array, Promise or Iterable into an Observable.
@@ -1165,19 +1181,19 @@ ANGULAR
     - Merge:
     - Concat:
 
-57. What is Push/Reactive vs Pull/Imperative programming?
+60. What is Push/Reactive vs Pull/Imperative programming?
     - RxJS is Reative programing.
     - Imperator programming is where caller code keeps the callee to get the stream of data. So Listerner code is responsible
       to pull stream of Data. Eg: Polling API.
     - Reactive programming is where we register a callback and the stream is resposible to push data.
     - Some developers also consider it as publisher and subsciber model as well.
 
-58. What are Subjects?
+61. What are Subjects?
     - A subject in RxJS is a special hybrid that can act as both an observable and an observer at the same time.
       This way, data can be pushed into a subject, and the subject’s subscribers will, in turn, receive that pushed data.
     - Subjects are useful for multicasting or for when a source of data is not easily transformed into an observable.
 
-59. Difference between the Behaviour Subject and Replay Subject
+62. Difference between the Behaviour Subject and Replay Subject
     - BehaviorSubject
       BehaviorSubject requires an initial value and stores the current value and emits it to the new subscribers
 
@@ -1188,7 +1204,7 @@ ANGULAR
       AsyncSubject only emits the latest value only when it completes. If it errors out then it will emit an error, 
       but will not emit any values.
 
-60. Usecase of Behaviour Subject?
+63. Usecase of Behaviour Subject?
     - So if you want an initial (default) value, you need to use BehaviorSubject.
       Eg: Let's suppose you want to check if the user logged in
       isLoggedIn$ = new Subject<boolean>();
@@ -1200,14 +1216,14 @@ ANGULAR
       isLoggedIn$.subscribe(res => console.log(res))
       This subscribe will fire immediately as it holds false as a value in stream.
 
-61. What are interceptor in Angular?
+64. What are interceptor in Angular?
     - Interceptor helps us to execute pre-processing logic before any HTTP call is made from Angular applicaiton.
 
-62. How to implement interceptors?
+65. How to implement interceptors?
     - First create a class which has the pre-processing logic and this class should implememt 'HttpInterceptor' interface.
     - Dependency inject the pre-processing class at module level using providers.
 
-63. Give some usecase of HttpInterceptor?
+66. Give some usecase of HttpInterceptor?
     - Authentication: In every call we would want to attach the JWT token. This can be done by attaching the token in the headers
                       before call is made.
     - Modifiying URL: If we want to modify url before API call we can do that using Interceptors.
@@ -1215,7 +1231,7 @@ ANGULAR
                 cache, get data and cancel the expensive HTTP call to server.
     - Modify Request and Response payloads: If we want to modify the request and reponse payload than we can do it via Interceptors
 
-64. Can we have multiple Interceptors?
+67. Can we have multiple Interceptors?
     - Yes we can fire multiple Interceptors in pre-processing by defining interceptors in the provider and specify 'multi' value 
       to true.
     - As per the sequence provided in the providers interceptor will fire in that sequence.
@@ -1225,7 +1241,7 @@ ANGULAR
         { provide: HTTP_INTERCEPTORS, useClass: <classname2>, multi: true }
       ]
 
-65. What are Template driven form and Reactive forms in Angular?
+68. What are Template driven form and Reactive forms in Angular?
     - Template Driven Form	                   | Reactive Forms
       --------------------------------------------------------------------------------------------
       Template-driven forms make use of the    | Reactive forms are based on "ReactiveFormsModule"
@@ -1235,11 +1251,11 @@ ANGULAR
       In a template-driven approach, most of   | In reactive-driven approach, the logic 
       the logic is driven from the template	   | resides mainly in the component or typescript code
 
-66. Which file is entry point of Angular application?
+69. Which file is entry point of Angular application?
     The angular.module is the entry point of Angular applications.
     Each application has just one module that gets the rootElement or tag.
 
-67. Combine multiple API call in Angular
+70. Combine multiple API call in Angular
     - We can combine multiple api using 'mergeMap' and 'forkJoin'.
     - When multiple API's are interdependent the we can use 'mergeMap'.
     - When multiple API's are not interdependent and we want to group the multiple API calls then we can use 'forkJoin'.
@@ -1253,18 +1269,7 @@ let output= {'a':'a', 'b':'b', 'c':'c','d':'d'}
 14. Declaretive vs Imperative React/angular is declaretive and js is imperative
 23. web pack
 
-- CanActivate:
-  - CanActivate is the Interface that a class can implement to be a guard deciding if a route can be activated. 
-    If all guards return true, navigation continues. If any guard returns false, navigation is cancelled. 
 
-- AuthGuard:
-  - AuthGuard is used to protect the routes from unauthorized access in angular.
-
-  - How AuthGuard Works?
-    - Auth guard provide lifecycle event called canActivate. The canActivate is like a constructor. 
-      It will be called before accessing the routes. The canActivate has to return true to access the page.
-      If it returns false, we can not access the page.
-      We can write our user authorization and authentication logic inside the canActivate function.
 
 - loadchildren
 - router
