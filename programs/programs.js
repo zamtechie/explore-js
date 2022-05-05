@@ -294,19 +294,18 @@ function arrToObj() {
 /******************************************************/
 
 function arrangeElements() {
+  //let inputArr = ["-1", "-1", "6", "1", "9", "3", "2", "-1", "4", "-1"];
   let inputArr = [-1, -1, 6, 1, 9, 3, 2, -1, 4, -1];
   let outputArr = [];
   for (let i = 0; i < inputArr.length; i++) {
-    console.log(i);
     if (inputArr.includes(i)) {
-      console.log('In if');
-      outputArr.push(inputArr[i]);
+      outputArr.push(i);
     } else {
-      console.log('In else');
       outputArr.push(-1);
     }
   }
+
   console.log('outputArr:', outputArr);
 }
 
-// arrangeElements();
+arrangeElements();
