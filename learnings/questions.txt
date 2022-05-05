@@ -563,6 +563,10 @@ JS ARCHITECTURE
       redirects you straight to the app. Any login prompts will not be necessary now that the server
       contains your credentials.
 
+    - We have implemented SSO using IAM(dentity and Access Management) aws service.
+    - Login page will access the Identity service which will be common service across multiple web-applicaitons.
+    - On successful logon it will send the jwt token which will be stored in the browser localstorage 
+
   - To implementation SSO in Angular we need angular-oauth2-oidc package.
     ref: https://www.youtube.com/watch?v=AcuzemsJfxA
 
@@ -580,6 +584,69 @@ JS ARCHITECTURE
       adoption of web standards. In full standards mode, the behavior is (hopefully) the behavior described 
       by the HTML and CSS specifications. In almost standards mode, there are only a very small 
       number of quirks implemented.
+
+12. What is CanDeactivate Guard?
+    - The Angular CanDeactivate guard is called, whenever we navigate away from the route before the current 
+      component gets deactivated.
+    - The best use case for CanDectivate guard is the data entry component. The user may have filled the data entry
+      and tries to leave that component without saving his work. The CanDeactivate guard gives us a chance to warn 
+      the user that he has not saved his work and give him a chance to cancel the navigation.
+
+13. Disadvantange of SPA?
+    - A Problem In Storing Browser History:
+      SPAs don’t reload the entire page and update the URL & resources of a web page. So it is clear that there 
+      can’t be any browsing history by which we can’t go back or forth. This means that when users click the 
+      back button, they won’t go back; a browser only takes users to the previous page, not to the previous state in an app.
+    - SEO Optimization?:
+      Since SPAs operate on JavaScript and download data on request from the client, they drastically lose in SEO optimization.
+
+14. How to integrate the one component develop in react in Angular app? What is micro-frontend?
+    - "ModuleFederationPlugin" can use to implement micro-frontend where we can share code between two applications.
+    - In webpack.config.js we have "exposes" (which will generate new file "remoteEntry.js" ) and 
+      "remotes" (url to import the exponsed content eg: remote@url)keys.
+
+15. How to implement SEO?
+    - In simple terms, it means the process of improving your site to increase its visibility when people
+      search for products or services related to your business in Google, Bing, and other search engines.
+
+16. Steps to implement SEO in web-application?
+    - Add relevant HTML meta tags:
+      Search engine crawlers look at certain HTML tags on a web page to identify the type of content it is serving.
+      The two most relevant tags for SEO are 'title' and 'description' tags.
+
+    - User keywords in application? What are keywords?:
+      In search engine terms, keywords are the phases users type into the search box of a browser.
+      To draw search engine users to your web page, you need first to identify the keywords users looking for
+      content similar to what you are offering are searching.
+      Once you have identified the relevant keywords, you should use them in the web page’s content.
+      The most important places to use the identified keywords are the web page’s title tag and H1 tag.
+
+17. Page load speed
+    - Best page load time goes from 1s to 5s
+    - Due to the importance of page speed for user experience, Google started using it as a ranking factor 
+      in its ranking algorithm.
+    - Google’s Lighthouse is a great tool to measure your site’s performance.
+    - You can use several approaches to increase the load speed of a web page.
+      - Minify CSS, Javascript, and HTML
+      - Reduce the number of redirects
+      - Take advantage of browser caching
+      - Optimize image sizes
+      - Take advantage of lazy loading
+
+18. Steps to implement SEO in Angular application?
+    - With server-side rendering, each HTML page is rendered on the server during the run time. 
+      It means that before the page loads, it takes some time for the server to render HTML upon request and send it to the browser. 
+      This method can potentially decrease the page load speed, especially if many requests are coming at a time.
+    - With pre-rendering, an HTML file for every URL is rendered during the build time. It means that your app has all 
+      HTML files built in advance so that the pages are ready to load fast upon request. 
+      The downside is that making changes on those pages requires re-building them.
+    - With dynamic rendering, your app has pre-rendered HTML pages and serves them to crawlers only. 
+      The real users, however, interact with the regular client-side rendered version of the app.
+    - Every JS framework has its tools and ways to implement those methods of tackling SEO challenges. 
+      Angular provides a comprehensive SSR and pre-rendering solution called Angular Universal.
+
+19. Angular upcoming module for SEO
+    - Universal Angular.
 
 - What kind of things must you be wary of when the design or developing for multilingual sites?
 - How to check Performance of web application from google chrome
@@ -1032,19 +1099,22 @@ ANGULAR
             pure: false
           })
 
-46. What's the full form of RxJS?
+46. Usecase of using Impure Pipes
+    - Impure pipe is use for filtering or sorting of data.
+
+47. What's the full form of RxJS?
     - RxJS stands for Reactive extentions for JavaScript.
 
-47. What is the purpose of RxJS?
+48. What is the purpose of RxJS?
     - Main purpose of RxJS is to handle Asynchronous data stream easily.
     Note: Asynchronous data can be http response, Timer or port.
 
-48. What are Observables and Observer in RxJS?
+49. What are Observables and Observer in RxJS?
     - Observable and Observer is RxJS objects to handle Asynchronous data stream.
     - Observable represents Asynchronous data stream and Observer is nothing but a function which will subscribe the
       Observable and listen to the data stream.
 
-49. Explain the Subscribe with sample code?
+50. Explain the Subscribe with sample code?
     - Goal of Subscribe is to attach the listener to the Observable.
 
     Eg:
@@ -1069,24 +1139,24 @@ ANGULAR
       filterObservalObj.unsubsribe();
     }
 
-50. How to to unsubsribe the Observable stream in RxJS?
+51. How to to unsubsribe the Observable stream in RxJS?
     - We can unsubsribe observable using <Observable Object>.unsubsribe method.
 
-51. Explain concept of operators with Sample code?
+52. Explain concept of operators with Sample code?
     - Operator is nothing but a small piece of logic that will change one observable stream to another observable stream
       using Pipe.
 
-54. How to install RxJS?
+53. How to install RxJS?
     - npm install rxjs
 
-55. Differentiate between RxJS and Promise?
+54. Differentiate between RxJS and Promise?
     - Observable return the stream of data and Promise return a single value.
     - We can subscribe and unsubsribe stream and we cannot cancel the Promise.
 
-56. How you have used RxJS in Angular project?
+55. How you have used RxJS in Angular project?
     - RxJS is used mostly with HTTP calls since it returns stream of data/Observable.
 
-57. What kind of RxJS operator you have used uptill now:
+56. What kind of RxJS operator you have used uptill now:
     - Map:  Transform data in a Observable into a different format.
     - Filter: Filter the data based on filter criteria
     - From: This operator will turn Array, Promise or Iterable into an Observable.
@@ -1095,19 +1165,19 @@ ANGULAR
     - Merge:
     - Concat:
 
-58. What is Push/Reactive vs Pull/Imperative programming?
+57. What is Push/Reactive vs Pull/Imperative programming?
     - RxJS is Reative programing.
     - Imperator programming is where caller code keeps the callee to get the stream of data. So Listerner code is responsible
       to pull stream of Data. Eg: Polling API.
     - Reactive programming is where we register a callback and the stream is resposible to push data.
     - Some developers also consider it as publisher and subsciber model as well.
 
-52. What are Subjects?
+58. What are Subjects?
     - A subject in RxJS is a special hybrid that can act as both an observable and an observer at the same time.
       This way, data can be pushed into a subject, and the subject’s subscribers will, in turn, receive that pushed data.
     - Subjects are useful for multicasting or for when a source of data is not easily transformed into an observable.
 
-53. Difference between the Behaviour Subject and Replay Subject
+59. Difference between the Behaviour Subject and Replay Subject
     - BehaviorSubject
       BehaviorSubject requires an initial value and stores the current value and emits it to the new subscribers
 
@@ -1118,14 +1188,26 @@ ANGULAR
       AsyncSubject only emits the latest value only when it completes. If it errors out then it will emit an error, 
       but will not emit any values.
 
-59. What are interceptor in Angular?
+60. Usecase of Behaviour Subject?
+    - So if you want an initial (default) value, you need to use BehaviorSubject.
+      Eg: Let's suppose you want to check if the user logged in
+      isLoggedIn$ = new Subject<boolean>();
+      isLoggedIn$.subscribe(res => console.log(res))
+      This subscribe will not fire until isLoggedIn$.next(someValue) is called
+
+      //BehaviorSubject
+      isLoggedIn$ = new BehaviorSubject<boolean>(false); // <---- You give 'false' as an initial value
+      isLoggedIn$.subscribe(res => console.log(res))
+      This subscribe will fire immediately as it holds false as a value in stream.
+
+61. What are interceptor in Angular?
     - Interceptor helps us to execute pre-processing logic before any HTTP call is made from Angular applicaiton.
 
-60. How to implement interceptors?
+62. How to implement interceptors?
     - First create a class which has the pre-processing logic and this class should implememt 'HttpInterceptor' interface.
     - Dependency inject the pre-processing class at module level using providers.
 
-61. Give some usecase of HttpInterceptor?
+63. Give some usecase of HttpInterceptor?
     - Authentication: In every call we would want to attach the JWT token. This can be done by attaching the token in the headers
                       before call is made.
     - Modifiying URL: If we want to modify url before API call we can do that using Interceptors.
@@ -1133,7 +1215,7 @@ ANGULAR
                 cache, get data and cancel the expensive HTTP call to server.
     - Modify Request and Response payloads: If we want to modify the request and reponse payload than we can do it via Interceptors
 
-62. Can we have multiple Interceptors?
+64. Can we have multiple Interceptors?
     - Yes we can fire multiple Interceptors in pre-processing by defining interceptors in the provider and specify 'multi' value 
       to true.
     - As per the sequence provided in the providers interceptor will fire in that sequence.
@@ -1143,7 +1225,7 @@ ANGULAR
         { provide: HTTP_INTERCEPTORS, useClass: <classname2>, multi: true }
       ]
 
-63. What are Template driven form and Reactive forms in Angular?
+65. What are Template driven form and Reactive forms in Angular?
     - Template Driven Form	                   | Reactive Forms
       --------------------------------------------------------------------------------------------
       Template-driven forms make use of the    | Reactive forms are based on "ReactiveFormsModule"
@@ -1329,14 +1411,10 @@ Lifecycle hooks
 
 
 Design of Complete Angular Application
-CanDeactivate how it works?
-Disadvantange of SPA?
-SSO Implementation?
-How to integrate the one component develop in react in Angular app?
-How to implement SEO?
-Usecase of Behaviour Subject?
-Usecase of using Impure Pipes
-Angular upcoming module for SEO
+
+
+
+
 Lear SCSS ref: https://www.youtube.com/watch?v=Zz6eOVaaelI?
 
 
