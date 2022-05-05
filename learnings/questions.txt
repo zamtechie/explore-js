@@ -620,18 +620,18 @@ JS ARCHITECTURE
       content similar to what you are offering are searching.
       Once you have identified the relevant keywords, you should use them in the web page’s content.
       The most important places to use the identified keywords are the web page’s title tag and H1 tag.
-
-17. Page load speed
-    - Best page load time goes from 1s to 5s
-    - Due to the importance of page speed for user experience, Google started using it as a ranking factor 
-      in its ranking algorithm.
-    - Google’s Lighthouse is a great tool to measure your site’s performance.
-    - You can use several approaches to increase the load speed of a web page.
-      - Minify CSS, Javascript, and HTML
-      - Reduce the number of redirects
-      - Take advantage of browser caching
-      - Optimize image sizes
-      - Take advantage of lazy loading
+    
+    - Page load speed
+      - Best page load time goes from 1s to 5s
+      - Due to the importance of page speed for user experience, Google started using it as a ranking factor 
+        in its ranking algorithm.
+      - Google’s Lighthouse is a great tool to measure your site’s performance.
+      - You can use several approaches to increase the load speed of a web page.
+        - Minify CSS, Javascript, and HTML
+        - Reduce the number of redirects
+        - Take advantage of browser caching
+        - Optimize image sizes
+        - Take advantage of lazy loading
 
 18. Steps to implement SEO in Angular application?
     - With server-side rendering, each HTML page is rendered on the server during the run time. 
