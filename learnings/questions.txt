@@ -585,8 +585,7 @@ JS ARCHITECTURE
       by the HTML and CSS specifications. In almost standards mode, there are only a very small 
       number of quirks implemented.
 
-
-13. Disadvantange of SPA?
+12. Disadvantange of SPA?
     - A Problem In Storing Browser History:
       SPAs don’t reload the entire page and update the URL & resources of a web page. So it is clear that there 
       can’t be any browsing history by which we can’t go back or forth. This means that when users click the 
@@ -594,16 +593,16 @@ JS ARCHITECTURE
     - SEO Optimization?:
       Since SPAs operate on JavaScript and download data on request from the client, they drastically lose in SEO optimization.
 
-14. How to integrate the one component develop in react in Angular app? What is micro-frontend?
+13. How to integrate the one component develop in react in Angular app? What is micro-frontend?
     - "ModuleFederationPlugin" can use to implement micro-frontend where we can share code between two applications.
     - In webpack.config.js we have "exposes" (which will generate new file "remoteEntry.js" ) and 
       "remotes" (url to import the exponsed content eg: remote@url)keys.
 
-15. How to implement SEO?
+14. How to implement SEO?
     - In simple terms, it means the process of improving your site to increase its visibility when people
       search for products or services related to your business in Google, Bing, and other search engines.
 
-16. Steps to implement SEO in web-application?
+15. Steps to implement SEO in web-application?
     - Add relevant HTML meta tags:
       Search engine crawlers look at certain HTML tags on a web page to identify the type of content it is serving.
       The two most relevant tags for SEO are 'title' and 'description' tags.
@@ -627,7 +626,7 @@ JS ARCHITECTURE
         - Optimize image sizes
         - Take advantage of lazy loading
 
-18. Steps to implement SEO in Angular application?
+16. Steps to implement SEO in Angular application?
     - With server-side rendering, each HTML page is rendered on the server during the run time. 
       It means that before the page loads, it takes some time for the server to render HTML upon request and send it to the browser. 
       This method can potentially decrease the page load speed, especially if many requests are coming at a time.
@@ -639,7 +638,7 @@ JS ARCHITECTURE
     - Every JS framework has its tools and ways to implement those methods of tackling SEO challenges. 
       Angular provides a comprehensive SSR and pre-rendering solution called Angular Universal.
 
-19. Angular upcoming module for SEO
+17. Angular upcoming module for SEO
     - Universal Angular.
 
 - What kind of things must you be wary of when the design or developing for multilingual sites?
