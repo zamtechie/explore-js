@@ -271,3 +271,42 @@ export function programsFn() {
 
   // kidsToysFn(3, 11);
 }
+
+/*******************************************************/
+/* Input = [{"a": "a"}, {"b": "b"}, {"c": "c", "d": "d"}]
+	Output = {a: "a", b: "b", c: "c", d: "d"} */
+/*******************************************************/
+function arrToObj() {
+  let input = [{ a: 'a' }, { b: 'b' }, { c: 'c', d: 'd' }];
+  let output1 = input.reduce((obj, value) => {
+    return {
+      ...obj,
+      ...value,
+    };
+  });
+
+  console.log('output1:', output1);
+}
+//arrToObj();
+/******************************************************/
+/*  Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1}  */
+/*  Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] */
+/******************************************************/
+
+function arrangeElements() {
+  let inputArr = [-1, -1, 6, 1, 9, 3, 2, -1, 4, -1];
+  let outputArr = [];
+  for (let i = 0; i < inputArr.length; i++) {
+    console.log(i);
+    if (inputArr.includes(i)) {
+      console.log('In if');
+      outputArr.push(inputArr[i]);
+    } else {
+      console.log('In else');
+      outputArr.push(-1);
+    }
+  }
+  console.log('outputArr:', outputArr);
+}
+
+// arrangeElements();
