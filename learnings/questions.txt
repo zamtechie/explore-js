@@ -614,6 +614,8 @@ JS ARCHITECTURE
       Once you have identified the relevant keywords, you should use them in the web page’s content.
       The most important places to use the identified keywords are the web page’s title tag and H1 tag.
     
+    - Use of alt attributes for image.
+
     - Page load speed
       - Best page load time goes from 1s to 5s
       - Due to the importance of page speed for user experience, Google started using it as a ranking factor 
