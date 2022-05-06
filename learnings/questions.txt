@@ -686,6 +686,11 @@ MANAGEMENT
       Instead of delivering complete feature, can we divide modules which are must to have and nice to have.
       Can we diliver must-to-have modules and can take nice-to-have as a second increment.
 
+3.  Why you want to switch your job?
+    - I worked with my previous company for ten years and learned a lot. 
+      However, I feel like a change of jobs will help me grow my abilities and expand opportunities for career advancement.
+      I don’t want to become stagnant in this industry and understand that change is sometimes necessary for new experiences.
+
 ES6 features:
  -  templating
     - Template literals are enclosed by the backtick (` `) (grave accent) character instead of double or single quotes.
