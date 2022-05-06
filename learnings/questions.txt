@@ -1039,8 +1039,8 @@ ANGULAR
 
 39. Constructor VS ngOnInit()? What kind of code you will put in Constructor and in ngOnInit?
     - Constructor:  - Constructor is a TypeScript concept it is invoked by TypeScript framework.
-                    - There is not way to access html DOM element since View and Component are not initialized.
-                    - Initials the class member variables and can do Dependency Injection.
+                    - There is no way to access html DOM element since View and Component are not initialized.
+                    - initialization of class member variables and can do Dependency Injection here.
     - ngOnInit: - ngOnInit is an Angular concept and it is invoked by Angular framework.
                 - At this time Component is initialized and View binding is done so here we can write initializing code as well
                   as initializing of class member variables also loading of grid, enable/disabling UI etc
