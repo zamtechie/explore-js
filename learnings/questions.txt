@@ -696,7 +696,7 @@ ANGULAR
 -------
 1.  What is an Angular framework?
     - Angular is a Javascript Binding framework which binds the HTML UI and JavaScript Model.
-      It is MVVM, MVC, MVP, MVW.
+      It is MVVM(Model-View-ViewModel), MVC(Model-View-Controller), MVP(Model View Presenter), MVW(Model View Whatever).
       It helps to develop the SPA with the help of routing.
 
 2.  Difference between AngularJS and Angular?
