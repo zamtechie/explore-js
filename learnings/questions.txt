@@ -351,7 +351,7 @@ JS: ADVANCED
     - JS is single threaded language.
     - All function calls is maintain CALL-STACK(LIFO).
     - If code contains any platform API methods or event such as onclick eg setTimeout is present then its callback method is added in 
-      EVENT-QUEUE (FIFO). once call stack is empty then this callback function is added in the CALL-STACK.
+      EVENT-QUEUE (FIFO). once CALL-STACK is empty then this callback function is added in the CALL-STACK.
     - If code contains Promise then its resolve method is added in JOB-QUEUE which also a queue(FIFO). As soon as its resolve method is resolved it is 
       push to CALL-STACK.
     - JOB-QUEUE has higher preccedence then EVENT-QUEUE.
