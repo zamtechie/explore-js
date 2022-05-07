@@ -309,3 +309,70 @@ function arrangeElements() {
 }
 
 // arrangeElements();
+
+let arr = [2, 3, 1, 5, 6, 9, 8, 10, 32, 54, 44, 34, 24, 54];
+let arrOfObj = [
+  {
+    id: 1,
+    name: 'pqr',
+  },
+  {
+    id: 3,
+    name: 'abc',
+  },
+  {
+    id: 2,
+    name: 'xyz',
+  },
+];
+
+console.log(
+  arr.sort((a, b) => {
+    // console.log(a, b);
+    return a - b;
+    /*if(a-b > 0) {
+    return -1
+  }*/
+    //return 0;
+  })
+);
+
+arrOfObj.sort((secondElement, firstElement) => {
+  // console.log(obj1, obj2);
+
+  if (secondElement.id < firstElement.id) {
+    return -1;
+  }
+
+  if (secondElement.id > firstElement.id) {
+    return 1;
+  }
+  return 0;
+});
+//console.log(JSON.stringify(arrOfObj));
+
+var str = '{123}'; // T
+var str = '{123}}'; // F
+var str = '{{1}23}'; // T
+var str = '}123{'; // F
+var str = '{123}}{'; //F
+var str = '123'; //T
+var str = '{123}}{'; // F
+var str = '12{34}5'; // T
+
+function stringBalance(str) {
+  //console.log(str.match(new RegExp("{", "g")) || []).length));
+  //console.log(("str1,str2,str3,str4".match(new RegExp("str", "g")) || []).length);
+  //console.log((str.match(new RegExp("{", "g")) || []).length);
+  let firstCount = (str.match(new RegExp('{', 'g')) || []).length;
+  let secondCount = (str.match(new RegExp('}', 'g')) || []).length;
+  console.log(str.indexOf('{'));
+  console.log(firstCount);
+  if (firstCount === secondCount) {
+    console.log('String is balanced');
+  } else {
+    console.log('String is not balanced');
+  }
+}
+
+stringBalance('}123{');
