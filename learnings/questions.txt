@@ -1388,6 +1388,7 @@ Difference between html elements and html tags
 &lt; &gt; &nbsp;
 Accessibility
 HTML symantic elements
+New HTML5 features you have used?
 
 ----
 CSS:
@@ -1397,6 +1398,7 @@ box-sizing
 how to center the div in page
 cell-spacing and cell-padding
 inline, block, inline-block
+aria tags
 
 ---
 JS:
@@ -1404,6 +1406,7 @@ JS:
 Eventloop
 Closure in Javascript
 How many Array methods (Push, pop.. etc)
+what is fetch()?
 
 --------
 Angular:
@@ -1427,6 +1430,9 @@ Internationalisation
 Change detection
 Lifecycle hooks
 
+What is the user of public and private of inject object in constructor?
+
+
 
 Design of Complete Angular Application
 
@@ -1434,6 +1440,8 @@ Design of Complete Angular Application
 
 
 Lear SCSS ref: https://www.youtube.com/watch?v=Zz6eOVaaelI?
+
+
 
 
 
