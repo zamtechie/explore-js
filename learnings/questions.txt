@@ -60,10 +60,46 @@ HTML
       <section>
       <summary>
       <time>
+      <progress>
+
+6.  New HTML5 features?
+    1.  Audio and Video
+    2.  New Semantic elements
+    3.  New attributes such as 
+        - placeholder
+        - email
+        - tel
+    4.  Storage:
+        - localstorage
+        - sessionstorage
+
+7.  What are new CSS3 fetures?
+    - CSS3 selectors
+      - Descendant Selector: div p{ } - Target all p tags inside div.
+      - Child Selector: div>p{ } - This selector matches only direct child of element
+      - Adjacent Sibling: h4+p{ } - This selector matches p tag next to h4 and both sharing same parent.
+      - General Sibling: h3~p{ } - This selector matches all P elements exactly after h3 element.
+    - rounded corners: border-radius:10px;
+    - box shadows: border-shadow:0px 0px 10px red;
+    - box sizing: content-box or border-box;
+    - opacity:
+    - gradients
+    - transistions
+    - transformations
+    - animations
 
 ----------
 JS: BASICS
 ----------
+
+0.  Different types of Datatype in Javascript?
+    - boolean
+    - null
+    - undefined
+    - number
+    - bigint
+    - string
+    - Symbol
 
 1.  Difference between var, let and const in javascript?
     - All var, let and const are used to declare the variable in JS
@@ -1431,7 +1467,15 @@ Change detection
 Lifecycle hooks
 
 What is the user of public and private of inject object in constructor?
+- It is about encapsulation, and when you have a field or method on your component that you want to encapsulate in it, 
+  making it clear that it shouldn't be accessed from anywhere else, then you should absolutely make it 
+  private: That's what private is for: It signals your intent that whatever you've put it on shouldn't 
+  be touched from outside the class.
 
+- The same goes for public: It too is a compile-time-only construct, so the fact that class members are 
+  public by default, while true, has exactly zero meaning at runtime. But when you have a member that 
+  you explicitly intend to expose to the outside world as a part of your class's API, you should absolutely 
+  make it public to signal this intent: That's what public is for.
 
 
 Design of Complete Angular Application
