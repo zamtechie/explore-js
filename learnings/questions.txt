@@ -778,6 +778,47 @@ ANGULAR
 
       ref: https://medium.com/nerd-for-tech/what-is-inside-of-angular-json-file-636e81e67651
 
+      - projectType: The type of the project. The value “application” indicates that the project will represent 
+        an application that can be launched in a browser.
+
+      - root: points to the project files folder relative to the working environment. An empty value corresponds
+        to the root folder of the project.
+
+      - sourceRoot: Specifies the root folder of the source files. The place where all application files are 
+        actually defined.
+
+      - schematics section of settings is used for generating new files with CLI. For example, if I use the 
+        command ‘ng generate’ component by default component will use an SCSS file for styles.
+
+      - architect: Specifies the settings for building the project. Everyone knows the commands “ng serve” or “ng build”.
+        Inside the architect section, we can find settings for “serve” and “build” commands. We also could create our 
+        own architect settings and run them with the command “ng”.
+
+        - scripts section is about js files that you gonna use in your project additional libraries JQerry, Bootstrap, etc.
+
+        - styles section is about CSS files that you will use in the project. Like Bootstrap styles.
+
+        - outputPath specifies the directory for the compiled application files.
+
+        - configurations: contains specific settings for the different workspaces (production, development).
+          We also could add a new workspace for stage etc.
+
+        In the configuration section we can set the next settings:
+
+        - optimization: indicates whether optimization will be used
+
+        - outputHashing: Indicates whether a hash value will be appended to the generated file name. 
+          The value all says that a hash is added to the names of all generated files
+
+        - sourceMap: Determines if source map files will be generated. If you set “true” you will see 
+          original file names that you see in your project.
+
+        - namedChunks: determines if filenames will be used for named loadable chunks.
+
+        - vendorChunk: determines whether a separate file will be generated for third-party libraries used in the application.
+
+        - buildOptimizer: Includes @ angular-devkit / build-optimizer package to optimize when using the AOT option.
+
 7.  What is TypeScript and why do we need it?
     - TypeScript is the superset of Javascript and it adds types to the JavaScript.
       Eg: let x:number = 1;
