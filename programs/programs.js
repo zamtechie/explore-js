@@ -492,4 +492,4 @@ function primeNumberProgram() {
   console.log(isNumberPrime(7));
 }
 
-primeNumberProgram();
+// primeNumberProgram();
