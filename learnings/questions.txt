@@ -529,7 +529,8 @@ JS ARCHITECTURE
 
 6.  How will you increase the performance of web application.
     https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
-    1.  Make use of CDN links to load the external resources.
+    1.  Make use of CDN(Is a group of geographically distributed servers that speed up the delivery of web content by bringing it closer 
+        to where users are.) links to load the external resources.
     2.  Move your website to a better host:
         There are three possible types of hosting:
           - Shared hosting - cheap and slow
