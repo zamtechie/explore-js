@@ -287,7 +287,8 @@ function arrToObj() {
 
   console.log('output1:', output1);
 }
-arrToObj();
+// arrToObj();
+
 /******************************************************/
 /*  Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1}  */
 /*  Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] */
@@ -310,7 +311,35 @@ function arrangeElements() {
 
 // arrangeElements();
 
+/******************************************************/
+/*  Input : arr = [2, 3, 1, 5, 6, 9, 8, 10, 32, 54, 44, 34, 24, 54]  */
+/*  Output : [1, 2, 3, 5, 6, 8, 9, 10, 24, 32, 34, 44, 54, 54] */
+/******************************************************/
+
+function sortSingleDimentionsArray(arr) {
+  function sortArr(a, b) {
+    return a - b;
+  }
+
+  arr.sort(sortArr);
+  console.log(arr);
+}
+
 let arr = [2, 3, 1, 5, 6, 9, 8, 10, 32, 54, 44, 34, 24, 54];
+// sortSingleDimentionsArray(arr);
+
+/*************************/
+/*  Sort Array of Object */
+/*************************/
+
+function sortArrayOfObjects(arrOfObj) {
+  function sortArr(a, b) {
+    return a.id - b.id;
+  }
+  arrOfObj.sort(sortArr);
+  console.log(JSON.stringify(arrOfObj));
+}
+
 let arrOfObj = [
   {
     id: 1,
@@ -326,30 +355,7 @@ let arrOfObj = [
   },
 ];
 
-console.log(
-  arr.sort((a, b) => {
-    // console.log(a, b);
-    return a - b;
-    /*if(a-b > 0) {
-    return -1
-  }*/
-    //return 0;
-  })
-);
-
-arrOfObj.sort((secondElement, firstElement) => {
-  // console.log(obj1, obj2);
-
-  if (secondElement.id < firstElement.id) {
-    return -1;
-  }
-
-  if (secondElement.id > firstElement.id) {
-    return 1;
-  }
-  return 0;
-});
-//console.log(JSON.stringify(arrOfObj));
+// sortArrayOfObjects(arrOfObj);
 
 var str = '{123}'; // T
 var str = '{123}}'; // F
@@ -375,4 +381,81 @@ function stringBalance(str) {
   }
 }
 
-stringBalance('}123{');
+// stringBalance('}123{');
+
+/******************************************************/
+/*  Input : Is string 'nitin' is Palindrom  */
+/*  Output :  */
+/******************************************************/
+
+function isPalindrom(str) {
+  let msg = `${str} is isPalindrom`;
+  let strLength = str.length;
+  let strLengthHalf = strLength / 2;
+
+  for (let i = 0; i < strLength / 2; i++) {
+    if (str[i] !== str[strLength - i - 1]) {
+      msg = `${str} is not isPalindrom`;
+      break;
+    }
+  }
+  return msg;
+}
+
+function isPalindrom2(str) {
+  const firstArr = str.split('');
+  const strArr = str.split('');
+  strArr.reverse();
+
+  if (str === str.split('').reverse().join('')) {
+    return `${str} is palidrom`;
+  } else {
+    return `${str} is not palindrom`;
+  }
+}
+
+// console.log(isPalindrom('1nitin1'))
+// console.log(isPalindrom2('cbsbbdbc'))
+
+/******************************************************/
+/*  Input : Balace String program  */
+/*  Output :  */
+/******************************************************/
+
+var str = '{123}'; // T
+// var str = '{123}}'; // F
+//var str = '{{1}23}'; // T
+// var str = '}123{'; // F
+//var str = '{123}}{'; //F
+//var str = '123'; //T
+//var str = '{123}}{'; // F
+//var str = '12{34}5'; // T
+
+function getAllIndexOf(arr, str) {
+  // console.log(arr, str);
+  let index = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === str) {
+      index.push(i);
+    }
+  }
+  return index;
+}
+
+let indexOfOpenBrace = getAllIndexOf(str, '{');
+let indexOfCloseBrace = getAllIndexOf(str, '}');
+console.log(indexOfOpenBrace);
+console.log(indexOfCloseBrace);
+
+if (indexOfOpenBrace.length === indexOfCloseBrace.length) {
+  for (let i = 0; i < indexOfOpenBrace.length; i++) {
+    if (indexOfOpenBrace[i] < indexOfCloseBrace[i]) {
+      console.log('string is balanced');
+    } else {
+      console.log('string is not balanced');
+      break;
+    }
+  }
+} else {
+  console.log('string is not balanced');
+}

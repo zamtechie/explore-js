@@ -23,3 +23,4 @@ JS: Programs
 18. Get the prime number from 1 to 100
 19. Input: [{'a':'a'}, {'b':'b'}, {'c':'c'}] Output: {'a':'a', 'b':'b', 'c':'c'}
 20. Input = [["1"],["2"],["3"]] Output= [1,2,3]
+21. Is string palindrom?
