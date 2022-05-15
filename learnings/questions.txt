@@ -678,9 +678,18 @@ JS ARCHITECTURE
       Angular provides a comprehensive SSR and pre-rendering solution called Angular Universal.
 
 17. Angular upcoming module for SEO
-    - Universal Angular.
+    - Angular Universal.
 
-- What kind of things must you be wary of when the design or developing for multilingual sites?
+18. What kind of things must you be wary of when the design or developing for multilingual sites?
+    - We need to use ngx-translate/core plugin for Angular 8
+
+    Steps:
+    1.  Create an Angular Application.
+    2.  Installing ngx-translate package.
+    3.  Creating translation files.
+    4.  Making required changes in other files.
+    5.  Adding a feature to switch between languages.
+
 - How to check Performance of web application from google chrome
 - How browser will know the new version file#code.js
 - Microfront ends, webpack fedration
