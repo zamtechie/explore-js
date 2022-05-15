@@ -418,44 +418,78 @@ function isPalindrom2(str) {
 // console.log(isPalindrom2('cbsbbdbc'))
 
 /******************************************************/
-/*  Input : Balace String program  */
+/*  Input : Balance String program  */
 /*  Output :  */
 /******************************************************/
 
-var str = '{123}'; // T
-// var str = '{123}}'; // F
-//var str = '{{1}23}'; // T
-// var str = '}123{'; // F
-//var str = '{123}}{'; //F
-//var str = '123'; //T
-//var str = '{123}}{'; // F
-//var str = '12{34}5'; // T
-
-function getAllIndexOf(arr, str) {
-  // console.log(arr, str);
-  let index = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === str) {
-      index.push(i);
+function balaceStringProgram() {
+  function isStringBalanced(str) {
+    function getAllIndexOf(arr, str) {
+      let index = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === str) {
+          index.push(i);
+        }
+      }
+      return index;
     }
-  }
-  return index;
-}
 
-let indexOfOpenBrace = getAllIndexOf(str, '{');
-let indexOfCloseBrace = getAllIndexOf(str, '}');
-console.log(indexOfOpenBrace);
-console.log(indexOfCloseBrace);
+    let isStringBalanced = false;
+    let indexOfOpenBrace = getAllIndexOf(str, '{');
+    let indexOfCloseBrace = getAllIndexOf(str, '}');
 
-if (indexOfOpenBrace.length === indexOfCloseBrace.length) {
-  for (let i = 0; i < indexOfOpenBrace.length; i++) {
-    if (indexOfOpenBrace[i] < indexOfCloseBrace[i]) {
-      console.log('string is balanced');
+    if (indexOfOpenBrace.length === indexOfCloseBrace.length) {
+      for (let i = 0; i < indexOfOpenBrace.length; i++) {
+        if (indexOfOpenBrace[i] < indexOfCloseBrace[i]) {
+          isStringBalanced = true;
+        } else {
+          isStringBalanced = false;
+          break;
+        }
+      }
     } else {
-      console.log('string is not balanced');
-      break;
+      isStringBalanced = false;
     }
+
+    return isStringBalanced;
   }
-} else {
-  console.log('string is not balanced');
+
+  var str = '{123}'; // T
+  var str = '{123}}'; // F
+  //var str = '{{1}23}'; // T
+  //var str = '}123{'; // F
+  //var str = '{123}}{'; //F
+  //var str = '123'; //T
+  //var str = '{123}}{'; // F
+  //var str = '12{34}5'; // T
+
+  if (isStringBalanced(str)) {
+    console.log(`${str} is balanced string`);
+  } else {
+    console.log(`${str} is not balanced string`);
+  }
 }
+
+//balaceStringProgram();
+
+/******************************************************/
+/*  Input : Is number prime  */
+/*  Output :  */
+/******************************************************/
+
+function primeNumberProgram() {
+  function isNumberPrime(num) {
+    let sqrt = Math.sqrt(num);
+
+    for (let i = 2; i <= sqrt; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+
+    return num > 1;
+  }
+  console.log(isNumberPrime(7));
+}
+
+primeNumberProgram();
