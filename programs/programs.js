@@ -493,3 +493,17 @@ function primeNumberProgram() {
 }
 
 // primeNumberProgram();
+
+/******************************************************/
+/*  Input : Let scoping  */
+/*  Output :  */
+/******************************************************/
+function letScoping () {
+  for (let i=0; i<5; i++) {
+    setTimeout(function() {
+      console.log(i);
+    },1000)
+  }
+}
+
+letScoping();
