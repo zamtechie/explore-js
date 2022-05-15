@@ -24,3 +24,4 @@ JS: Programs
 19. Input: [{'a':'a'}, {'b':'b'}, {'c':'c'}] Output: {'a':'a', 'b':'b', 'c':'c'}
 20. Input = [["1"],["2"],["3"]] Output= [1,2,3]
 21. Is string palindrom?
+22. Is number prime?
