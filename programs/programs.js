@@ -357,32 +357,6 @@ let arrOfObj = [
 
 // sortArrayOfObjects(arrOfObj);
 
-var str = '{123}'; // T
-var str = '{123}}'; // F
-var str = '{{1}23}'; // T
-var str = '}123{'; // F
-var str = '{123}}{'; //F
-var str = '123'; //T
-var str = '{123}}{'; // F
-var str = '12{34}5'; // T
-
-function stringBalance(str) {
-  //console.log(str.match(new RegExp("{", "g")) || []).length));
-  //console.log(("str1,str2,str3,str4".match(new RegExp("str", "g")) || []).length);
-  //console.log((str.match(new RegExp("{", "g")) || []).length);
-  let firstCount = (str.match(new RegExp('{', 'g')) || []).length;
-  let secondCount = (str.match(new RegExp('}', 'g')) || []).length;
-  console.log(str.indexOf('{'));
-  console.log(firstCount);
-  if (firstCount === secondCount) {
-    console.log('String is balanced');
-  } else {
-    console.log('String is not balanced');
-  }
-}
-
-// stringBalance('}123{');
-
 /******************************************************/
 /*  Input : Is string 'nitin' is Palindrom  */
 /*  Output :  */
@@ -498,12 +472,12 @@ function primeNumberProgram() {
 /*  Input : Let scoping  */
 /*  Output :  */
 /******************************************************/
-function letScoping () {
-  for (let i=0; i<5; i++) {
-    setTimeout(function() {
+function letScoping() {
+  for (let i = 0; i < 5; i++) {
+    setTimeout(function () {
       console.log(i);
-    },1000)
+    }, 1000);
   }
 }
 
-letScoping();
+// letScoping();
