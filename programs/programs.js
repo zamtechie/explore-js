@@ -466,7 +466,39 @@ function primeNumberProgram() {
   console.log(isNumberPrime(7));
 }
 
-// primeNumberProgram();
+primeNumberProgram();
+
+/******************************************************/
+/*  Input : List all prime numbers from 1 to 100  */
+/*  Output :  */
+/******************************************************/
+
+function listAllPrimeNumbers() {
+  function listPrimeNumbers(endNumber) {
+    function isPrimeNumber(num) {
+      let numSqrt = Math.sqrt(num);
+      for (let i = 2; i <= numSqrt; i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+      return num > 1;
+    }
+    let primeArr = [];
+
+    for (let i = 0; i < endNumber; i++) {
+      if (isPrimeNumber(i)) {
+        primeArr.push(i);
+      }
+    }
+
+    return primeArr;
+  }
+
+  console.log(listPrimeNumbers(10));
+}
+
+listAllPrimeNumbers();
 
 /******************************************************/
 /*  Input : Let scoping  */
