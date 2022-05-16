@@ -47,5 +47,5 @@ lengthOfRemaining > 4
 normal 
 lengthOfRemaining === 4
 split into two
-lengthOfRemaining <=3
+lengthOfRemaining <3
 take all elements
