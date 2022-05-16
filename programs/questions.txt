@@ -26,3 +26,26 @@ JS: Programs
 21. Is string palindrom?
 22. Is number prime?
 23. List all prime mumbers?
+
+24. Rearraging the string
+Ignore '-' and spaces ' '
+Last two elements can be of three or two characters
+i.   044121452122 -> 044 121 452 122
+ii.  ABC -EFG - SH-SD -> ABC EFG SH SD
+iii. ABC -EFG - SH-SDS -> ABC EFG SHS DS
+iv.  ABC -EFG - SH-SDSD -> ABC EFG SHS DSD
+
+ABC EFG SHSD
+
+3 < lengthOfRemaining < 6
+
+lengthOfRemaining === 3 dont do anything
+lengthOfRemaining === 4 split into two
+lengthOfRemaining === 
+
+lengthOfRemaining > 4
+normal 
+lengthOfRemaining === 4
+split into two
+lengthOfRemaining <=3
+take all elements
