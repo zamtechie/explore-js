@@ -1421,47 +1421,62 @@ Sum of the array elements
 Custome middleware in nodeJS
 
 ------
+Self Introduction details:
 
-1. Introduce yourself
-My name is Zameer Inamdar.
-Born and brought up in Pune.
-Completed my Bachelor and Master degrees in Computer Science.
-Started my career from 2009, worked for Niche Software Solutions as a PHP developer.
-Here worked on CMS like Joomla, Drupal.
-Worked on Juvlon project which was an email marketing project.
+1.  Introduce yourself
+  My name is Zameer Inamdar.
+  Born and brought up in Pune.
+  Completed my Bachelor and Master degrees in Computer Science.
+  Started my career from 2009, worked for Niche Software Solutions as a PHP developer.
+  Here worked on CMS like Joomla, Drupal.
+  Worked on Juvlon project which was an email marketing project.
 
-In 2011 join the iGATE company.
-Here I got the oppurtunity to work on hybrid mobile applications using Phonegap/cordova.
-These applications was for Metlife client which is Insurance company.
+  In 2011 join the iGATE company.
+  Here I got the oppurtunity to work on hybrid mobile applications using Phonegap/cordova.
+  These applications was for Metlife client which is Insurance company.
 
-In 2013 join the Persistent Systems worked on ANZ bank mobile applicaiton which belongs to banking domain.
-Then worked on different projects like SRM, Radia and MVision EDR which belongs to Cyber Security domain.
+  In 2013 join the Persistent Systems worked on ANZ bank mobile applicaiton which belongs to banking domain.
+  Then worked on different projects like SRM, Radia and MVision EDR which belongs to Cyber Security domain.
 
-2. Which project u r working and my role?
-Currenlty I am working on MVision EDR project and my role is UI Lead.
+2.  Which project u r working and my role?
+    Currenlty I am working on MVision EDR project and my role is UI Lead.
 
 3.  Could you please brief about your current project.
-Currently I am working on MVision EDR project.
-It is Endpoint threat detection and response product which is used by SOC (Security operation center) Analysts.
-Primary task of this product is to monitor the traces on endpoint.
-Analysis the trace and to identity is there any threat/malware found at endpoint.
-Notify/Alert the SOC Analysts about the threat detection.
-SOC Analysts can take actions like create the Investigation.
-Quarantine the endpoint on which treat is detected.
+    Currently I am working on MVision EDR project.
+    It is Endpoint threat detection and response product which is used by SOC (Security operation center) Analysts.
+    Primary task of this product is to monitor the traces on endpoint.
+    Analysis the trace and to identity is there any threat/malware found at endpoint.
+    Notify/Alert the SOC Analysts about the threat detection.
+    SOC Analysts can take actions like create the Investigation.
+    Quarantine the endpoint on which treat is detected.
 
-Different workspace/dashboards
-- Monitoring Dashboard: Alert about threats and create Investigation on that threat.
-- Investigation Dashboard: It will display the investigation details and provide answers to the playbook questions.
-- Real Time search Dashboard: SOC Analyst can search using query across all live devices.
-- Historical Search Dashboard: SOC analysts can search using query across all devices
+    Different workspace/dashboards
+    - Monitoring Dashboard: Alert about threats and create Investigation on that threat.
+    - Investigation Dashboard: It will display the investigation details and provide answers to the playbook questions.
+    - Real Time search Dashboard: SOC Analyst can search using query across all live devices.
+    - Historical Search Dashboard: SOC analysts can search using query across all devices
 
-Daily tasks I do related to project?
-- Implement the new features.
-- Understand the new requirements, provide the estimate for new work and have discussion with PM.
-- Distribute the work within the team and guide the team member if they have any queries.
-- Code owner of this project so need to review all PR raised by the team member
-- Plan the release for each PSI (Potential Shippable Increment)
+4.  Daily tasks I do related to project?
+    - Implement the new features.
+    - Understand the new requirements, provide the estimate for new work and have discussion with PM.
+    - Distribute the work within the team and guide the team member if they have any queries.
+    - Code owner of this project so need to review all PR raised by the team member
+    - Plan the release for each PSI (Potential Shippable Increment)
 
+5.  Why you want to change your current job?
+    - Looking for better career prospects, professional growth.
+    - Current company is service based so wanted to explore to with product base company.
+    - Wanted to explore the different domain than I have worked already
+
+6.  Why Are You the Best Person for the Job?
+    - For last 8yrs I have extensively worked on Angular, HTML5, CSS3 and JS and grown my technical skills.
+    - Beside web-developend, I also have experience of developing UI for mobile and tablet devices.
+    - Beside web-development, I also has experience to develop hybrid mobile application development.
+    - Beside working for service based company I also have exposure to work with Product based company.
+
+6.  What are greatest strength?
+
+7.  What are greatest weakness?
 -----------------------
 Interview Questions
 -----------------------
