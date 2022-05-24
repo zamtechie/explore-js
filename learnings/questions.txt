@@ -964,9 +964,12 @@ ANGULAR
     - If we need to navigate via script then we need to call this.router.navigate()
       Eg: this.router.navigate(['/Home'])
 
-20  CanActivate:
+20  CanActivate and CanLoad Guard:
     - CanActivate is the Interface that a class can implement to be a guard deciding if a route can be activated. 
       If all guards return true, navigation continues. If any guard returns false, navigation is cancelled. 
+
+    - CanLoad Guard
+      The CanLoad Guard prevents the loading of the Lazy Loaded Module.
 
 21. AuthGuard:
     - AuthGuard is used to protect the routes from unauthorized access in angular.
