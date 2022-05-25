@@ -1571,4 +1571,5 @@ Architect:
 3.  Provide any solutions which you have given?
 4.  What you do things to learn more?
 5.  State management?
+6.  If you want to store the user sensitive data in UI how will you do it?
 
