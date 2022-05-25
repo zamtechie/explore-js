@@ -1564,5 +1564,11 @@ Lear SCSS ref: https://www.youtube.com/watch?v=Zz6eOVaaelI?
 
 
 
-
+Architect:
+----------
+1.  Given 1 Month what all things you will explore?
+2.  What is XXRF?
+3.  Provide any solutions which you have given?
+4.  What you do things to learn more?
+5.  State management?
 
