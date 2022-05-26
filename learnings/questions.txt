@@ -1362,6 +1362,13 @@ ANGULAR
     - When multiple API's are interdependent the we can use 'mergeMap'.
     - When multiple API's are not interdependent and we want to group the multiple API calls then we can use 'forkJoin'.
 
+Top features of Typescript:
+https://betterprogramming.pub/top-5-typescript-features-you-should-master-2358db9ab3d5
+1.  Union
+2.  Generics
+3.  Tuples
+4.  Mapped Types
+5.  Type Guards
 
 Programs?
 let input  = [{'a':'a'}, {'b':'b'}, {'c':'c','d':'d'}]
