@@ -1419,6 +1419,11 @@ let output= {'a':'a', 'b':'b', 'c':'c','d':'d'}
 - content projection
 - change detection
 - what zone.js
+  - NgZone is a wrapper around Zone.js which is a library that creates a context around asynchronous functions in order to make them trackable.
+  - Angular's change detection is heavily dependent on Zones, How?
+  - Angular needs a way of understanding when's the time to run the change detection, which is basically nothing but updating the DOM 
+    to represent the latest model ( javascript ) changes.
+
 - routing
 - lazy load routing
 - what are decorators class type and property
