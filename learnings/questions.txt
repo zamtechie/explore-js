@@ -1102,6 +1102,35 @@ ANGULAR
     - "ViewChild and ViewChildren" will helpful for accessing the HTML elements of its own view.
     - "ContentChild and ContentChildren" will helpful for accessing the HTML elements which are Projected by the Parent.
 
+37. Explain different change detection statergies in Angular?
+
+    - https://www.thirdrocktechkno.com/blog/how-angular-change-detection-works/#:~:text=Angular's%20change%20detection%20kicks%20in,the%20component's%20view%20(DOM).
+
+    - Angular Change Detection Strategies
+      - Angular provides you two Change Detection Strategies, the default one and the onPush.
+
+        - ChangeDetectionStrategy.Default
+          - In order to know whether the view should be updated, Angular needs to access the new value, compare it with the old one,
+            and make the decision on whether the view should be updated.
+          - By default, Angular makes no assumption on what the component depends upon. So it has to be conservative and will checks every
+            time something may have changed, this is called dirty checking. In a more concrete way, it will perform checks for each browser events,
+            timers, XHRs and promises.
+          - This can be problematic when you’re starting to have a big application with many components, specially if you’re focused on performance.
+
+        - ChangeDetectionStrategy.onPush
+          - When using the onPush strategy on the component, you basically say to Angular that it should not make any guess on when it needs to 
+            perform the check for change. It will rely only on the change of the Input references, some events triggered by itself (the component) 
+            or one of its children. Lastly, you, the developer, can ask explicitly Angular to do it with the componentRef.markForCheck() method.
+          - With onPush, the component only depends on its inputs and embraces the immutability, the change detection strategy will kicks in when:
+              The Input reference changes;
+              An event originated from the component or one of its children;
+              Run change detection explicitly (componentRef.markForCheck());
+              Use the async pipe in the view.
+        - Summary
+          - To automatic change detection, Angular use by default ChangeDetectionStrategy.Default strategy but it cause performance 
+            issue when our application become larger.
+          - So for larger application, It would be better to use ChangeDetectionStrategy.OnPush strategy as it saves performance.
+
 37. Explain the importance of Component Life Cycle? What are exactly Angular Component Hooks? Explain the LifeCycle or
     events in Angular Components?
     - Angular component hooks are nothing but readymade events provided by Angular which developer can use it and write
