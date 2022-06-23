@@ -690,6 +690,9 @@ JS ARCHITECTURE
     4.  Making required changes in other files.
     5.  Adding a feature to switch between languages.
 
+19. How angular application is bootstrap?
+    - ref: https://medium.com/siam-vit/how-an-angular-app-work-behind-the-scenes-angular-flow-dcc4d1df27bd
+
 - How to check Performance of web application from google chrome
 - How browser will know the new version file#code.js
 - Microfront ends, webpack fedration
