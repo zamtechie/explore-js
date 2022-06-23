@@ -1424,6 +1424,11 @@ let output= {'a':'a', 'b':'b', 'c':'c','d':'d'}
   - Angular needs a way of understanding when's the time to run the change detection, which is basically nothing but updating the DOM 
     to represent the latest model ( javascript ) changes.
 
+  ref:
+  https://stackoverflow.com/questions/45903493/zones-in-angular
+  https://betterprogramming.pub/zone-js-for-angular-devs-573d89bbb890
+  https://www.angulararchitects.io/aktuelles/angular-elements-part-iii/
+
 - routing
 - lazy load routing
 - what are decorators class type and property
