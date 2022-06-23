@@ -1331,9 +1331,13 @@ ANGULAR
     - Some developers also consider it as publisher and subsciber model as well.
 
 61. What are Subjects?
-    - A subject in RxJS is a special hybrid that can act as both an observable and an observer at the same time.
+    - An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers.
+      While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable),
+      Subjects are multicast.
+      A Subject is like an Observable, but can multicast to many Observers.
+    /* - A subject in RxJS is a special hybrid that can act as both an observable and an observer at the same time.
       This way, data can be pushed into a subject, and the subject’s subscribers will, in turn, receive that pushed data.
-    - Subjects are useful for multicasting or for when a source of data is not easily transformed into an observable.
+    - Subjects are useful for multicasting or for when a source of data is not easily transformed into an observable. */
 
 62. Difference between the Behaviour Subject and Replay Subject
     - BehaviorSubject
